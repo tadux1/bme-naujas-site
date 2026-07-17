@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en" data-title-en="BME Services — Mechanical Solutions Experts" data-title-lt="BME Services — Mechaninių sprendimų ekspertai">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>BME Services — Mechanical Solutions Experts</title>
+<meta name="description" content="JSC BME Services — mechanical, hydraulic and marine engineering for marine and industrial projects. Klaipėda, Lithuania. 15+ years, worldwide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080E17;            /* deep base */
+  --bg-2:#0B131F;
+  --panel:#0E1826;
+  --panel-2:#111E30;
+  --line:rgba(148,178,216,.12);
+  --line-str:rgba(148,178,216,.22);
+  --text:#E9EEF5;
+  --muted:#93A3B8;
+  --muted-d:#8496AD;
+  --blue:#2E9BFF;
+  --blue-d:#0E6FE0;
+  --cyan:#54CDF6;
+  --disp:"Archivo",system-ui,sans-serif;
+  --body:"Inter",system-ui,sans-serif;
+  --wrap:1240px;
+  --pad:clamp(72px,8vw,116px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;font-family:var(--disp);font-weight:700;line-height:1.04;letter-spacing:-.01em}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+
+.label{font-family:var(--body);font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.28em;color:var(--blue)}
+.label--muted{color:var(--muted-d)}
+.eyebrow{display:inline-flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:30px;height:1px;background:var(--blue)}
+
+/* focus + skip */
+.skip{position:absolute;left:-999px;top:10px;z-index:200;background:var(--blue);color:#04101f;padding:10px 18px;border-radius:3px;font-weight:600}
+.skip:focus{left:14px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:2px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.6em;font-family:var(--body);font-weight:600;font-size:.92rem;padding:15px 28px;border-radius:3px;cursor:pointer;border:1px solid transparent;transition:.28s ease;line-height:1}
+.btn__i{font-size:1.1em;transition:transform .28s ease}
+.btn:hover .btn__i{transform:translateX(4px)}
+.btn--primary{background:var(--blue-d);color:#fff;box-shadow:0 1px 0 rgba(255,255,255,.14) inset,0 8px 22px -16px rgba(46,155,255,.5)}
+.btn--primary:hover{background:#1a78e6;transform:translateY(-2px);box-shadow:0 12px 28px -12px rgba(46,155,255,.7)}
+.btn--ghost{background:rgba(255,255,255,.02);color:var(--text);border:1px solid var(--line-str)}
+.btn--ghost:hover{border-color:var(--blue);color:#fff;background:rgba(46,155,255,.08)}
+
+/* ============ HEADER ============ */
+.topline{height:3px;background:linear-gradient(90deg,var(--cyan),var(--blue-d) 60%,transparent)}
+.hdr{position:sticky;top:0;z-index:100;background:rgba(8,14,23,.72);backdrop-filter:blur(14px) saturate(1.2);border-bottom:1px solid var(--line)}
+.hdr__in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:78px}
+.brand{display:flex;align-items:center;gap:13px}
+.brand__mark{width:34px;height:34px;flex:none;border-radius:50%;background:
+  radial-gradient(circle at 50% 50%,transparent 30%,rgba(84,205,246,.15) 31%,transparent 46%),
+  conic-gradient(from 220deg,var(--cyan),var(--blue-d),#0a3d8c,var(--cyan));
+  position:relative;box-shadow:0 0 0 1px rgba(84,205,246,.4),0 6px 18px -8px rgba(46,155,255,.6)}
+.brand__mark::after{content:"";position:absolute;inset:10px;border-radius:50%;background:var(--bg);box-shadow:inset 0 0 0 2px rgba(84,205,246,.55)}
+.brand__logo{height:40px;width:auto;flex:none;display:block}
+.brand__txt{display:flex;flex-direction:column;line-height:1}
+.brand__name{font-family:var(--disp);font-weight:800;font-size:1.4rem;letter-spacing:.04em;color:#fff}
+.brand__ent{font-size:.58rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);margin-top:5px}
+.brand__ent b{color:var(--cyan);font-weight:600}
+.nav{display:flex;align-items:center;gap:34px}
+.nav__toggle{display:none;align-items:center;justify-content:center;width:42px;height:42px;flex:none;background:rgba(255,255,255,.03);border:1px solid var(--line-str);border-radius:5px;color:#fff;cursor:pointer;padding:0}
+.nav__toggle svg{width:22px;height:22px;stroke:currentColor}
+.nav__list{display:flex;gap:30px;min-width:416px;justify-content:flex-end}
+.nav__list a{font-size:.86rem;font-weight:500;color:var(--muted);position:relative;padding:8px 0;transition:color .2s}
+.nav__list a::after{content:"";position:absolute;left:0;bottom:2px;height:1px;width:0;background:var(--cyan);transition:width .26s}
+.nav__list a:hover{color:#fff}.nav__list a:hover::after{width:100%}
+.hdr__tools{display:flex;align-items:center;gap:20px}
+.hdr__tools .btn--primary{min-width:196px;justify-content:center}
+.lang{display:flex;font-size:.76rem;font-weight:600;color:var(--muted-d);gap:2px}
+.lang button{background:none;border:0;color:var(--muted-d);cursor:pointer;font:inherit;padding:4px 6px;border-radius:2px}
+.lang button[aria-pressed="true"]{color:#fff;background:rgba(46,155,255,.16);text-decoration:underline;text-underline-offset:3px}
+.lang span{color:var(--muted-d)}
+
+/* ============ HERO ============ */
+.hero{position:relative;min-height:clamp(620px,92vh,940px);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero__bg{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center 40%;background:#04090f}
+.hero__grad{position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(180deg,rgba(8,14,23,.62) 0%,rgba(8,14,23,.28) 34%,rgba(8,14,23,.72) 78%,var(--bg) 100%),
+  linear-gradient(90deg,rgba(8,14,23,.85) 0%,rgba(8,14,23,.35) 46%,transparent 74%)}
+.hero__in{position:relative;padding:0 0 clamp(66px,8vw,104px);max-width:960px}
+.hero__eyebrow{color:var(--cyan)}
+.hero__eyebrow::before{background:var(--cyan)}
+.hero h1{font-size:clamp(2.7rem,7vw,5.7rem);font-weight:800;text-transform:uppercase;letter-spacing:-.005em;margin:26px 0 0;max-width:16ch;text-shadow:0 4px 60px rgba(0,0,0,.5);overflow-wrap:break-word}
+.hero h1 .accent{color:transparent;background:linear-gradient(92deg,var(--cyan),#8fc9ff);-webkit-background-clip:text;background-clip:text}
+.hero__sub{margin:26px 0 0;font-size:clamp(1.02rem,1.5vw,1.22rem);color:#C7D2E0;max-width:56ch;line-height:1.6;min-height:4.8em}
+.hero__cta{display:flex;gap:16px;flex-wrap:wrap;margin-top:38px}
+.hero__meta{display:flex;gap:40px;flex-wrap:wrap;margin-top:52px;padding-top:30px;border-top:1px solid var(--line)}
+.hmeta__n{font-family:var(--disp);font-weight:700;font-size:1.7rem;color:#fff;line-height:1;overflow-wrap:break-word}
+.hmeta__n--word{font-size:1.15rem;line-height:1.15}
+.hmeta__l{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-d);margin-top:8px}
+.hmeta__n .u{color:var(--cyan)}
+.scrollcue{position:absolute;right:28px;bottom:30px;writing-mode:vertical-rl;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted-d);display:flex;align-items:center;gap:14px}
+.scrollcue::after{content:"";width:1px;height:46px;background:linear-gradient(var(--cyan),transparent)}
+
+/* ============ TRUST STRIP ============ */
+.trust{border-bottom:1px solid var(--line);background:var(--bg-2)}
+.trust__in{display:flex;align-items:center;gap:40px;flex-wrap:wrap;justify-content:space-between;padding:22px 0}
+.trust__lead{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-d)}
+.trust__logos{display:flex;gap:34px;flex-wrap:wrap;align-items:center}
+.trust__logos span{font-family:var(--disp);font-weight:700;font-size:1rem;color:var(--muted);opacity:.72;letter-spacing:.04em}
+
+/* ============ SECTION SHELL ============ */
+.section{padding:var(--pad) 0}
+.sec-head{max-width:640px;margin-bottom:clamp(42px,5vw,64px)}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,3rem);margin-top:20px}
+.sec-head p{color:var(--muted);margin-top:18px;font-size:1.05rem}
+
+/* ============ SERVICES ============ */
+.services{background:linear-gradient(180deg,var(--bg),var(--bg-2))}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.svc{background:var(--panel);padding:34px 30px 38px;position:relative;transition:background .3s ease}
+.svc::before{content:"";position:absolute;left:0;top:0;height:2px;width:0;background:linear-gradient(90deg,var(--cyan),var(--blue-d));transition:width .35s ease}
+.svc:hover{background:var(--panel-2)}
+.svc:hover::before{width:100%}
+.svc__n{font-family:var(--disp);font-weight:700;font-size:.8rem;letter-spacing:.1em;color:var(--blue)}
+.svc h3{font-size:1.16rem;margin:16px 0 12px;color:#fff;letter-spacing:0;overflow-wrap:break-word}
+.svc p{color:var(--muted);font-size:.92rem;line-height:1.6}
+.svc__arw{margin-top:20px;color:var(--muted-d);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;display:inline-flex;gap:.5em;align-items:center;transition:color .25s}
+.svc:hover .svc__arw{color:var(--cyan)}
+
+/* ============ ABOUT / entities ============ */
+.about{background:var(--bg-2);position:relative}
+.about__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,88px);align-items:center}
+.about__media{position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--line-str);aspect-ratio:4/3.2}
+.about__media img{width:100%;height:100%;object-fit:cover}
+.about__media::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 55%,rgba(8,14,23,.5))}
+.about h2{font-size:clamp(1.9rem,3.4vw,2.8rem);margin-top:20px}
+.about__lead{color:#C7D2E0;font-size:1.08rem;margin-top:20px;line-height:1.7}
+.about__body{color:var(--muted);margin-top:16px}
+.ent{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+.ent__card{border:1px solid var(--line);border-radius:5px;padding:22px 22px 24px;background:rgba(255,255,255,.015)}
+.ent__card h3{font-size:1.02rem;color:#fff;letter-spacing:0}
+.ent__card .label{margin-bottom:10px}
+.ent__card p{color:var(--muted);font-size:.88rem;margin-top:8px}
+
+/* ============ STATS BAND ============ */
+.stats{position:relative;overflow:hidden;isolation:isolate;border-block:1px solid var(--line);padding:clamp(52px,6vw,80px) 0}
+.stats__bg{position:absolute;inset:0;z-index:-2;background:#050a12 url('assets/mechanical-works-1.jpg') center/cover no-repeat}
+.stats__grad{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(5,10,18,.94),rgba(5,10,18,.7))}
+.stats__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
+.stat__n{font-family:var(--disp);font-weight:800;font-size:clamp(2.6rem,4.6vw,3.8rem);color:#fff;line-height:1;letter-spacing:-.02em;overflow-wrap:break-word}
+.stat__n--word{font-size:clamp(1.5rem,2.6vw,2.3rem);line-height:1.1;letter-spacing:0}
+.stat__n .u{color:var(--cyan)}
+.stat__l{color:var(--muted);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;margin-top:12px;max-width:18ch}
+
+/* ============ CONTACT ============ */
+.contact__grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(36px,5vw,72px)}
+.cinfo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:32px}
+.cinfo__c{border:1px solid var(--line);border-radius:5px;padding:20px;background:var(--panel)}
+.cinfo__c .label{color:var(--muted-d);font-size:.66rem}
+.cinfo__c p{margin-top:10px;color:#fff;font-weight:500;font-size:.98rem}
+.form{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:clamp(26px,3vw,38px)}
+.form__row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{margin-top:16px}
+.field label{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-d);margin-bottom:8px}
+.field input,.field select,.field textarea{width:100%;background:var(--bg);border:1px solid var(--line-str);border-radius:4px;padding:13px 14px;color:var(--text);font:inherit;font-size:.94rem;transition:border-color .2s}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue)}
+.field textarea{resize:vertical;min-height:110px}
+.form .btn{margin-top:22px;width:100%;justify-content:center}
+
+/* ============ FOOTER ============ */
+.foot{background:var(--bg);border-top:1px solid var(--line);padding:clamp(56px,7vw,88px) 0 34px}
+.foot__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.foot h3{font-size:.74rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-d);margin-bottom:18px}
+.foot a{display:block;color:var(--muted);font-size:.9rem;padding:5px 0;transition:color .2s}
+.foot a:hover{color:var(--cyan)}
+.foot__brand p{color:var(--muted);font-size:.9rem;margin-top:16px;max-width:34ch}
+.foot__soc{display:flex;gap:12px;margin-top:20px}
+.foot__soc a{width:38px;height:38px;border:1px solid var(--line-str);border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:600;color:var(--muted)}
+.foot__soc a:hover{border-color:var(--blue);color:#fff}
+.foot__bar{margin-top:52px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--muted-d);font-size:.82rem}
+
+/* ============ PROCESS ============ */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.step{background:var(--panel);padding:32px 28px 36px}
+.step__n{font-family:var(--disp);font-weight:800;font-size:2rem;color:transparent;-webkit-text-stroke:1px var(--blue)}
+.step h3{font-size:1.05rem;color:#fff;margin:14px 0 10px;letter-spacing:0}
+.step p{color:var(--muted);font-size:.9rem;line-height:1.6}
+/* ============ INDUSTRIES ============ */
+.ind__grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,80px);align-items:center}
+.ind__media{border-radius:6px;overflow:hidden;border:1px solid var(--line-str);aspect-ratio:4/3;position:relative}
+.ind__media img{width:100%;height:100%;object-fit:cover}
+.ind__media::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 55%,rgba(8,14,23,.45))}
+.ind__list{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+.ind__list li{display:flex;gap:12px;align-items:flex-start;color:#C7D2E0;font-size:.98rem;padding:16px 0;border-top:1px solid var(--line)}
+.ind__list li::before{content:"";width:8px;height:8px;margin-top:7px;flex:none;background:var(--blue);border-radius:2px;transform:rotate(45deg)}
+/* ============ GALLERY ============ */
+.gallery{column-count:4;column-gap:12px}
+.gal{margin:0 0 12px;break-inside:avoid;border-radius:5px;overflow:hidden;border:1px solid var(--line);position:relative;background:var(--panel)}
+.gal img{width:100%;display:block;transition:transform .55s ease}
+.gal:hover img{transform:scale(1.05)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 12px;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:#dbe6f4;background:linear-gradient(transparent,rgba(6,12,22,.82));opacity:0;transition:opacity .3s}
+.gal:hover figcaption{opacity:1}
+/* ============ WHY / CAREERS ============ */
+.why__grid,.careers__in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(40px,6vw,80px);align-items:center}
+.why__list{margin-top:24px;display:grid}
+.why__list li{padding:18px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.98rem;line-height:1.6}
+.why__list li:last-child{border-bottom:1px solid var(--line)}
+.why__list li b{color:#fff;font-weight:600}
+.why__media,.careers__media{border-radius:6px;overflow:hidden;border:1px solid var(--line-str);aspect-ratio:5/4}
+.why__media img,.careers__media img{width:100%;height:100%;object-fit:cover}
+.careers{background:var(--bg-2)}
+.careers__in p{color:#C7D2E0;font-size:1.05rem;margin-top:18px;line-height:1.7;max-width:46ch}
+.careers .btn{margin-top:28px}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:1000px){
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .about__grid,.contact__grid{grid-template-columns:1fr}
+  .stats__grid{grid-template-columns:repeat(2,1fr);gap:34px}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .ind__grid,.why__grid,.careers__in{grid-template-columns:1fr}
+  .why__media,.careers__media,.ind__media{aspect-ratio:16/10}
+  .gallery{column-count:3}
+  .foot__grid{grid-template-columns:1fr 1fr}
+  .nav__toggle{display:inline-flex}
+  .hdr__tools .btn--primary{min-width:0}
+  .nav__list{position:absolute;top:100%;left:0;right:0;display:none;flex-direction:column;gap:0;min-width:0;background:rgba(8,14,23,.98);backdrop-filter:blur(14px) saturate(1.2);border-bottom:1px solid var(--line);padding:8px 28px 18px;max-height:80vh;overflow:auto}
+  .nav__list.open{display:flex}
+  .nav__list li{width:100%}
+  .nav__list a{display:block;padding:13px 2px;font-size:1rem;border-bottom:1px solid var(--line)}
+  .nav__list a::after{display:none}
+}
+@media(max-width:620px){
+  .svc-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .ind__list{grid-template-columns:1fr}
+  .gallery{column-count:2}
+  .form__row,.cinfo,.ent{grid-template-columns:1fr}
+  .hero__meta{gap:26px}
+  .foot__grid{grid-template-columns:1fr}
+  .scrollcue{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-en="Skip to content" data-lt="Pereiti prie turinio">Skip to content</a>
+<div class="topline"></div>
+
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="#" aria-label="BME — Services and Powertech">
+      <img class="brand__logo" src="assets/bme-mark.png" alt="BME" width="61" height="40">
+      <span class="brand__txt">
+        <span class="brand__name">BME</span>
+        <span class="brand__ent"><b>Services</b> · Powertech</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list" id="navlist">
+        <li><a href="#services" data-en="Services" data-lt="Paslaugos">Services</a></li>
+        <li><a href="#about" data-en="About" data-lt="Apie mus">About</a></li>
+        <li><a href="#projects" data-en="Projects" data-lt="Projektai">Projects</a></li>
+        <li><a href="#careers" data-en="Careers" data-lt="Karjera">Careers</a></li>
+        <li><a href="#contact" data-en="Contact" data-lt="Kontaktai">Contact</a></li>
+      </ul>
+      <div class="hdr__tools">
+        <div class="lang" role="group" aria-label="Language / Kalba"><button type="button" data-lang="en" aria-pressed="true">EN</button><span>/</span><button type="button" data-lang="lt" aria-pressed="false">LT</button></div>
+        <a class="btn btn--primary" href="#contact"><span data-en="Get a quote" data-lt="Gauti pasiūlymą">Get a quote</span> <span class="btn__i" aria-hidden="true">→</span></a>
+        <button type="button" class="nav__toggle" aria-expanded="false" aria-controls="navlist" aria-label="Menu" data-label-en="Menu" data-label-lt="Meniu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <video class="hero__bg" autoplay loop muted playsinline preload="auto" poster="assets/hero-video-poster.jpg" aria-hidden="true">
+      <source src="assets/hero-video.webm" type="video/webm">
+      <source src="assets/hero-video.mp4" type="video/mp4">
+    </video>
+    <div class="hero__grad" aria-hidden="true"></div>
+    <div class="wrap hero__in">
+      <span class="label eyebrow hero__eyebrow" data-en="JSC BME Services — Klaipėda, Lithuania" data-lt="UAB „BME Services“ — Klaipėda, Lietuva">JSC BME Services — Klaipėda, Lithuania</span>
+      <h1><span data-en="Mechanical" data-lt="Mechaninių">Mechanical</span> <span class="accent" data-en="Solutions" data-lt="sprendimų">Solutions</span> <span data-en="Experts" data-lt="ekspertai">Experts</span></h1>
+      <p class="hero__sub" data-en="Mechanical, hydraulic and marine engineering services for marine and industrial projects — delivered on board, in the yard and on site, worldwide." data-lt="Mechaninės, hidraulinės ir jūrų inžinerijos paslaugos jūriniams ir pramoniniams projektams — laive, doke ir objekte, visame pasaulyje.">Mechanical, hydraulic and marine engineering services for marine and industrial projects — delivered on board, in the yard and on site, worldwide.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#contact"><span data-en="Request a quote" data-lt="Užklausti pasiūlymo">Request a quote</span> <span class="btn__i" aria-hidden="true">→</span></a>
+        <a class="btn btn--ghost" href="#services" data-en="Our services" data-lt="Mūsų paslaugos">Our services</a>
+      </div>
+      <div class="hero__meta">
+        <div><div class="hmeta__n">15<span class="u">+</span></div><div class="hmeta__l" data-en="Years of marine engineering" data-lt="Metų jūrų inžinerijos patirties">Years of marine engineering</div></div>
+        <div><div class="hmeta__n hmeta__n--word" data-en="Worldwide" data-lt="Visame pasaulyje">Worldwide</div><div class="hmeta__l" data-en="On-site & dockside delivery" data-lt="Vietoje ir prie krantinės">On-site & dockside delivery</div></div>
+        <div><div class="hmeta__n">24/7</div><div class="hmeta__l" data-en="Emergency response" data-lt="Skubi pagalba">Emergency response</div></div>
+      </div>
+    </div>
+    <span class="scrollcue" aria-hidden="true" data-en="Scroll" data-lt="Slinkti">Scroll</span>
+  </section>
+
+  <!-- TRUST -->
+  <div class="trust"><div class="wrap trust__in">
+    <span class="trust__lead" data-en="Trusted across marine & industry" data-lt="Patikima jūrų ir pramonės sektoriuose">Trusted across marine & industry</span>
+    <div class="trust__logos"><span data-en="Shipyards" data-lt="Laivų statyklos">Shipyards</span><span data-en="Vessel operators" data-lt="Laivų operatoriai">Vessel operators</span><span data-en="Cement terminals" data-lt="Cemento terminalai">Cement terminals</span><span data-en="Industrial clients" data-lt="Pramonės klientai">Industrial clients</span></div>
+  </div></div>
+
+  <!-- SERVICES -->
+  <section class="section services" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label eyebrow" data-en="What we do" data-lt="Ką darome">What we do</span>
+        <h2 data-en="Full-scope machinery capability" data-lt="Visos apimties įrangos priežiūra ir remontas">Full-scope machinery capability</h2>
+        <p data-en="From a complete engine overhaul to a single machined bolt — nine disciplines that keep marine and industrial machinery running." data-lt="Nuo pilno variklio kapitalinio remonto iki vieno pagaminto varžto — devynios sritys, užtikrinančios nenutrūkstamą jūrų ir pramonės įrangos veikimą.">From a complete engine overhaul to a single machined bolt — nine disciplines that keep marine and industrial machinery running.</p>
+      </div>
+      <div class="svc-grid">
+        <article class="svc"><div class="svc__n">01</div><h3 data-en="Main &amp; Auxiliary Engine Repair" data-lt="Pagrindinių ir pagalbinių variklių remontas">Main &amp; Auxiliary Engine Repair</h3><p data-en="Maintenance, troubleshooting and overhaul of propulsion and auxiliary engines to manufacturers’ requirements — inspection, component replacement, alignment and performance testing." data-lt="Pagrindinių ir pagalbinių variklių priežiūra, diagnostika ir kapitalinis remontas pagal gamintojų reikalavimus — apžiūra, dalių keitimas, centravimas ir bandymai.">Maintenance, troubleshooting and overhaul of propulsion and auxiliary engines to manufacturers’ requirements — inspection, component replacement, alignment and performance testing.</p><span class="svc__arw" data-en="Learn more →" data-lt="Sužinoti daugiau →">Learn more →</span></article>
+        <article class="svc"><div class="svc__n">02</div><h3 data-en="Hydraulic Systems Repair" data-lt="Hidraulinių sistemų remontas">Hydraulic Systems Repair</h3><p data-en="Diagnosis, repair and restoration of marine and industrial hydraulic systems — cylinders, pumps and motors, valves, leak detection, piping and commissioning." data-lt="Jūrinių ir pramoninių hidraulinių sistemų diagnostika, remontas ir atkūrimas — cilindrai, siurbliai ir varikliai, vožtuvai, nuotėkių paieška, vamzdynai ir paleidimas.">Diagnosis, repair and restoration of marine and industrial hydraulic systems — cylinders, pumps and motors, valves, leak detection, piping and commissioning.</p><span class="svc__arw" data-en="Learn more →" data-lt="Sužinoti daugiau →">Learn more →</span></article>
+        <article class="svc"><div class="svc__n">03</div><h3 data-en="Gearbox Maintenance &amp; Overhaul" data-lt="Reduktorių priežiūra ir kapitalinis remontas">Gearbox Maintenance &amp; Overhaul</h3><p data-en="Full overhaul of marine gearboxes and transmissions — disassembly and inspection, bearing and seal renewal, shaft alignment, reassembly and testing." data-lt="Jūrinių reduktorių ir transmisijų kapitalinis remontas — išardymas ir apžiūra, guolių ir sandariklių keitimas, velenų centravimas, surinkimas ir bandymai.">Full overhaul of marine gearboxes and transmissions — disassembly and inspection, bearing and seal renewal, shaft alignment, reassembly and testing.</p><span class="svc__arw" data-en="Learn more →" data-lt="Sužinoti daugiau →">Learn more →</span></article>
+        <article class="svc"><div class="svc__n">04</div><h3 data-en="Seized Bolt Removal &amp; Bolt Manufacturing" data-lt="Prikepusių varžtų šalinimas ir gamyba">Seized Bolt Removal &amp; Bolt Manufacturing</h3><p data-en="Safe extraction of seized or corroded heavy-duty bolts without damaging surrounding components; replacement bolts manufactured to specification." data-lt="Saugus prikepusių ar korozijos pažeistų stambių varžtų šalinimas nepažeidžiant aplinkinių dalių; pakaitiniai varžtai gaminami pagal specifikaciją.">Safe extraction of seized or corroded heavy-duty bolts without damaging surrounding components; replacement bolts manufactured to specification.</p><span class="svc__arw" data-en="Learn more →" data-lt="Sužinoti daugiau →">Learn more →</span></article>
+        <article class="svc"><div class="svc__n">05</div><h3 data-en="Pneumatic Systems Installation &amp; Repair" data-lt="Pneumatinių sistemų montavimas ir remontas">Pneumatic Systems Installation &amp; Repair</h3><p data-en="Installation, repair and maintenance of onboard and industrial pneumatic systems — air piping, valves, cylinders, leak detection and testing." data-lt="Laivų ir pramoninių pneumatinių sistemų montavimas, remontas ir priežiūra — oro vamzdynai, vožtuvai, cilindrai, nuotėkių paieška ir bandymai.">Installation, repair and maintenance of onboard and industrial pneumatic systems — air piping, valves, cylinders, leak detection and testing.</p><span class="svc__arw" data-en="Learn more →" data-lt="Sužinoti daugiau →">Learn more →</span></article>
+        <article class="svc"><div class="svc__n">06</div><h3 data-en="Pump Repair" data-lt="Siurblių remontas">Pump Repair</h3><p data-en="Repair and restoration of marine pumps — centrifugal, positive-displacement, cooling-water, bilge and ballast, and hydraulic pumps." data-lt="Jūrinių siurblių remontas ir atkūrimas — išcentriniai, tūriniai, aušinimo vandens, triumo ir balasto bei hidrauliniai siurbliai.">Repair and restoration of marine pumps — centrifugal, positive-displacement, cooling-water, bilge and ballast, and hydraulic pumps.</p><span class="svc__arw" data-en="Learn more →" data-lt="Sužinoti daugiau →">Learn more →</span></article>
+        <article class="svc"><div class="svc__n">07</div><h3 data-en="Compressor Installation &amp; Repair" data-lt="Kompresorių montavimas ir remontas">Compressor Installation &amp; Repair</h3><p data-en="Installation, servicing and repair of marine compressors and compressed-air systems — overhaul, valve and bearing replacement, diagnostics and testing." data-lt="Jūrinių kompresorių ir suslėgto oro sistemų montavimas, priežiūra ir remontas — kapitalinis remontas, vožtuvų ir guolių keitimas, diagnostika ir bandymai.">Installation, servicing and repair of marine compressors and compressed-air systems — overhaul, valve and bearing replacement, diagnostics and testing.</p><span class="svc__arw" data-en="Learn more →" data-lt="Sužinoti daugiau →">Learn more →</span></article>
+        <article class="svc"><div class="svc__n">08</div><h3 data-en="Manpower Supply" data-lt="Darbo jėgos nuoma">Manpower Supply</h3><p data-en="Qualified marine fitters and engineers deployed to shipyards and vessels worldwide." data-lt="Kvalifikuoti laivų montuotojai ir inžinieriai, siunčiami į laivų statyklas ir laivus visame pasaulyje.">Qualified marine fitters and engineers deployed to shipyards and vessels worldwide.</p><span class="svc__arw" data-en="Learn more →" data-lt="Sužinoti daugiau →">Learn more →</span></article>
+        <article class="svc"><div class="svc__n">09</div><h3 data-en="Spare Parts Supply" data-lt="Atsarginių dalių tiekimas">Spare Parts Supply</h3><p data-en="Sourcing and delivery of OEM and equivalent spare parts for engines and machinery." data-lt="OEM ir analogiškų atsarginių dalių varikliams ir įrangai paieška ir tiekimas.">Sourcing and delivery of OEM and equivalent spare parts for engines and machinery.</p><span class="svc__arw" data-en="Learn more →" data-lt="Sužinoti daugiau →">Learn more →</span></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPMENT (illustrative capability media) -->
+  <section class="section" id="equipment" style="background:var(--bg-2)">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label eyebrow" data-en="In the workshop" data-lt="Dirbtuvėse">In the workshop</span>
+        <h2 data-en="Machinery we overhaul" data-lt="Įranga, kurią remontuojame">Machinery we overhaul</h2>
+        <p data-en="Representative of the pumps, compressors and rotating equipment we strip, inspect and rebuild — on board and in the workshop." data-lt="Vaizduoja siurblius, kompresorius ir sukamąją įrangą, kurią išardome, tikriname ir atkuriame — laive ir dirbtuvėse.">Representative of the pumps, compressors and rotating equipment we strip, inspect and rebuild — on board and in the workshop.</p>
+      </div>
+      <div class="svc-grid" style="grid-template-columns:repeat(2,1fr)">
+        <article class="svc" style="padding:0;overflow:hidden"><video class="cardvid" autoplay loop muted playsinline preload="none" poster="assets/service-pump-poster.jpg" aria-label="Marine pump casing and impeller during overhaul in the workshop" data-label-en="Marine pump casing and impeller during overhaul in the workshop" data-label-lt="Jūrinio siurblio korpusas ir sparnuotė remonto metu dirbtuvėse" style="aspect-ratio:16/9;object-fit:cover;width:100%;display:block"><source src="assets/service-pump.webm" type="video/webm"><source src="assets/service-pump.mp4" type="video/mp4"></video><div style="padding:22px 26px 28px"><div class="svc__n" data-en="Pumps" data-lt="Siurbliai">Pumps</div><h3 style="font-size:1.05rem" data-en="Pump repair &amp; overhaul" data-lt="Siurblių remontas ir kapitalinis remontas">Pump repair &amp; overhaul</h3></div></article>
+        <article class="svc" style="padding:0;overflow:hidden"><video class="cardvid" autoplay loop muted playsinline preload="none" poster="assets/service-compressor-poster.jpg" aria-label="Marine air compressor being overhauled in a ship engine room" data-label-en="Marine air compressor being overhauled in a ship engine room" data-label-lt="Jūrinis oro kompresorius, remontuojamas laivo mašinų skyriuje" style="aspect-ratio:16/9;object-fit:cover;width:100%;display:block"><source src="assets/service-compressor.webm" type="video/webm"><source src="assets/service-compressor.mp4" type="video/mp4"></video><div style="padding:22px 26px 28px"><div class="svc__n" data-en="Compressors" data-lt="Kompresoriai">Compressors</div><h3 style="font-size:1.05rem" data-en="Compressor installation &amp; repair" data-lt="Kompresorių montavimas ir remontas">Compressor installation &amp; repair</h3></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section" id="process" style="background:linear-gradient(180deg,var(--bg-2),var(--bg))">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label eyebrow" data-en="How we work" data-lt="Kaip dirbame">How we work</span>
+        <h2 data-en="From first call to sea trial" data-lt="Nuo pirmo skambučio iki bandymų">From first call to sea trial</h2>
+        <p data-en="A disciplined workflow that keeps downtime short and quality high — on board, dockside or in our workshop." data-lt="Disciplinuotas darbo procesas, trumpinantis prastovą ir užtikrinantis kokybę — laive, prie krantinės ar dirbtuvėse.">A disciplined workflow that keeps downtime short and quality high — on board, dockside or in our workshop.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="step__n">01</div><h3 data-en="Inquiry &amp; assessment" data-lt="Užklausa ir įvertinimas">Inquiry &amp; assessment</h3><p data-en="We review the fault, drawings and history, then agree scope, timing and access — on board or remotely." data-lt="Įvertiname gedimą, brėžinius ir istoriją, suderiname apimtį, terminus bei prieigą — laive arba nuotoliniu būdu.">We review the fault, drawings and history, then agree scope, timing and access — on board or remotely.</p></div>
+        <div class="step"><div class="step__n">02</div><h3 data-en="Planning &amp; mobilization" data-lt="Planavimas ir mobilizacija">Planning &amp; mobilization</h3><p data-en="Tools, parts and the right specialists are mobilized to the vessel, yard or our workshop — anywhere in the world." data-lt="Įrankiai, dalys ir reikiami specialistai mobilizuojami į laivą, doką ar dirbtuves — bet kur pasaulyje.">Tools, parts and the right specialists are mobilized to the vessel, yard or our workshop — anywhere in the world.</p></div>
+        <div class="step"><div class="step__n">03</div><h3 data-en="Repair &amp; overhaul" data-lt="Remontas ir kapitalinis remontas">Repair &amp; overhaul</h3><p data-en="Disassembly, inspection, machining and reassembly to manufacturers’ requirements, with progress reported throughout." data-lt="Išardymas, apžiūra, apdirbimas ir surinkimas pagal gamintojų reikalavimus, informuojant apie darbų eigą.">Disassembly, inspection, machining and reassembly to manufacturers’ requirements, with progress reported throughout.</p></div>
+        <div class="step"><div class="step__n">04</div><h3 data-en="Testing &amp; handover" data-lt="Bandymai ir perdavimas">Testing &amp; handover</h3><p data-en="Function and performance testing, alignment checks and a documented handover — ready to return to service." data-lt="Veikimo ir našumo bandymai, centravimo patikros ir dokumentuotas perdavimas — pasiruošus grįžti į eksploataciją.">Function and performance testing, alignment checks and a documented handover — ready to return to service.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / entities -->
+  <section class="section about" id="about">
+    <div class="wrap about__grid">
+      <div class="about__media"><img src="assets/about-corridor-1.jpg" alt="Two BME Services engineers in branded workwear on board a vessel" data-alt-en="Two BME Services engineers in branded workwear on board a vessel" data-alt-lt="Du BME Services inžinieriai su firmine apranga laive"></div>
+      <div>
+        <span class="label eyebrow" data-en="Who we are" data-lt="Kas mes esame">Who we are</span>
+        <h2 data-en="One team behind two engineering companies" data-lt="Viena komanda, dvi inžinerijos įmonės">One team behind two engineering companies</h2>
+        <p class="about__lead" data-en="For more than 15 years, BME Services has provided professional mechanical, hydraulic and marine engineering services for marine and industrial projects — based in Klaipėda, with most works carried out overseas." data-lt="Daugiau nei 15 metų BME Services teikia profesionalias mechaninės, hidraulinės ir jūrų inžinerijos paslaugas jūriniams ir pramoniniams projektams — įsikūrusi Klaipėdoje, didžioji dalis darbų atliekama užsienyje.">For more than 15 years, BME Services has provided professional mechanical, hydraulic and marine engineering services for marine and industrial projects — based in Klaipėda, with most works carried out overseas.</p>
+        <p class="about__body" data-en="Our team of experienced marine engineers, hydraulic specialists and skilled technicians has completed projects in shipyards and onboard vessels across Europe and beyond. Because every hour of downtime affects vessel operations, we deliver efficient, reliable and technically sound solutions to the highest standards of quality and safety." data-lt="Mūsų komandą sudaro patyrę jūrų inžinieriai, hidraulikos specialistai ir įgudę technikai, įgyvendinę projektus laivų statyklose ir laivuose Europoje ir už jos ribų. Kadangi kiekviena prastovos valanda tiesiogiai veikia laivo darbą, teikiame efektyvius, patikimus ir techniškai pagrįstus sprendimus, laikydamiesi aukščiausių kokybės ir saugos standartų.">Our team of experienced marine engineers, hydraulic specialists and skilled technicians has completed projects in shipyards and onboard vessels across Europe and beyond. Because every hour of downtime affects vessel operations, we deliver efficient, reliable and technically sound solutions to the highest standards of quality and safety.</p>
+        <div class="ent">
+          <div class="ent__card"><span class="label" data-en="Marine &amp; mechanical" data-lt="Jūrų ir mechanikos">Marine &amp; mechanical</span><h3>BME Services</h3><p data-en="Engine, hydraulic, gearbox and machinery repair for marine and industrial projects." data-lt="Variklių, hidraulikos, reduktorių ir įrangos remontas jūriniams ir pramoniniams projektams.">Engine, hydraulic, gearbox and machinery repair for marine and industrial projects.</p></div>
+          <div class="ent__card"><span class="label label--muted" data-en="Sister company" data-lt="Susijusi įmonė">Sister company</span><h3>BME Powertech</h3><p><span data-en="Adjacent engineering services under shared ownership." data-lt="Gretutinės inžinerijos paslaugos, valdomos tų pačių savininkų.">Adjacent engineering services under shared ownership.</span> <em data-en="Scope to be confirmed." data-lt="Veiklos apimtis tikslinama.">Scope to be confirmed.</em></p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="section stats">
+    <div class="stats__bg" aria-hidden="true"></div>
+    <div class="stats__grad" aria-hidden="true"></div>
+    <div class="wrap stats__grid">
+      <div><div class="stat__n">15<span class="u">+</span></div><div class="stat__l" data-en="Years of marine engineering" data-lt="Metų jūrų inžinerijos patirties">Years of marine engineering</div></div>
+      <div><div class="stat__n">9</div><div class="stat__l" data-en="Core service disciplines" data-lt="Pagrindinės paslaugų sritys">Core service disciplines</div></div>
+      <div><div class="stat__n stat__n--word" data-en="Worldwide" data-lt="Visame pasaulyje">Worldwide</div><div class="stat__l" data-en="On-site &amp; dockside delivery" data-lt="Vietoje ir prie krantinės">On-site &amp; dockside delivery</div></div>
+      <div><div class="stat__n">24/7</div><div class="stat__l" data-en="Emergency response" data-lt="Skubi pagalba">Emergency response</div></div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section class="section" id="industries">
+    <div class="wrap ind__grid">
+      <div class="ind__media"><img src="assets/terminal-branded.jpg" alt="Bulk terminal and vessel served by BME" data-alt-en="Bulk terminal and vessel served by BME" data-alt-lt="Biriųjų krovinių terminalas ir laivas, aptarnaujami BME" loading="lazy"></div>
+      <div>
+        <span class="label eyebrow" data-en="Industries" data-lt="Sektoriai">Industries</span>
+        <h2 data-en="Where we work" data-lt="Kur dirbame">Where we work</h2>
+        <p class="about__body" style="margin-top:18px" data-en="From shipyards and dry docks to bulk terminals and processing plants — wherever rotating and reciprocating machinery has to keep running." data-lt="Nuo laivų statyklų ir sausųjų dokų iki biriųjų krovinių terminalų ir gamyklų — visur, kur sukamoji ir stūmoklinė įranga turi nesustoti.">From shipyards and dry docks to bulk terminals and processing plants — wherever rotating and reciprocating machinery has to keep running.</p>
+        <ul class="ind__list">
+          <li data-en="Shipyards &amp; dry docks" data-lt="Laivų statyklos ir sausieji dokai">Shipyards &amp; dry docks</li>
+          <li data-en="Vessel owners &amp; operators" data-lt="Laivų savininkai ir operatoriai">Vessel owners &amp; operators</li>
+          <li data-en="Cement &amp; bulk terminals" data-lt="Cemento ir biriųjų krovinių terminalai">Cement &amp; bulk terminals</li>
+          <li data-en="Industrial &amp; processing plants" data-lt="Pramonės ir gamybos įmonės">Industrial &amp; processing plants</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section" id="work" style="background:var(--bg-2)">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label eyebrow" data-en="On the tools" data-lt="Prie darbo">On the tools</span>
+        <h2 data-en="Work gallery" data-lt="Darbų galerija">Work gallery</h2>
+        <p data-en="Real jobs from the workshop, the dock and on board — our own equipment and crews, not stock imagery." data-lt="Tikri darbai iš dirbtuvių, doko ir laivo — mūsų pačių įranga ir komandos, ne stock nuotraukos.">Real jobs from the workshop, the dock and on board — our own equipment and crews, not stock imagery.</p>
+      </div>
+      <div class="gallery">
+        <figure class="gal"><img src="assets/about-workshop.jpg" alt="BME crew in the dry dock" loading="lazy"><figcaption data-en="Dry dock" data-lt="Sausasis dokas">Dry dock</figcaption></figure>
+        <figure class="gal"><img src="assets/gearbox-overhaul-2.jpg" alt="Marine gearbox gears during overhaul" loading="lazy"><figcaption data-en="Gearbox overhaul" data-lt="Reduktoriaus remontas">Gearbox overhaul</figcaption></figure>
+        <figure class="gal"><img src="assets/hydraulic-1.jpg" alt="Hydraulic piping and valves" loading="lazy"><figcaption data-en="Hydraulic systems" data-lt="Hidraulinės sistemos">Hydraulic systems</figcaption></figure>
+        <figure class="gal"><img src="assets/welding.jpg" alt="On-site welding" loading="lazy"><figcaption data-en="Welding" data-lt="Suvirinimas">Welding</figcaption></figure>
+        <figure class="gal"><img src="assets/propulsion-2.jpg" alt="Propeller and shaft in dry dock" loading="lazy"><figcaption data-en="Propulsion &amp; shafts" data-lt="Sraigtai ir velenai">Propulsion &amp; shafts</figcaption></figure>
+        <figure class="gal"><img src="assets/hydraulic-2.jpg" alt="Hydraulic lines onboard" loading="lazy"><figcaption data-en="Hydraulic repair" data-lt="Hidraulikos remontas">Hydraulic repair</figcaption></figure>
+        <figure class="gal"><img src="assets/mechanical-works-2.jpg" alt="Mechanical works on deck machinery" loading="lazy"><figcaption data-en="Mechanical works" data-lt="Mechanikos darbai">Mechanical works</figcaption></figure>
+        <figure class="gal"><img src="assets/conveyor-install.jpg" alt="Ship loader conveyor installation" loading="lazy"><figcaption data-en="Conveyor install" data-lt="Konvejerio montavimas">Conveyor install</figcaption></figure>
+        <figure class="gal"><img src="assets/hydraulic-3.jpg" alt="Hydraulic pipework runs" loading="lazy"><figcaption data-en="Pipework" data-lt="Vamzdynai">Pipework</figcaption></figure>
+        <figure class="gal"><img src="assets/propulsion-drydock.jpg" alt="Vessel stern and propeller in dry dock" loading="lazy"><figcaption data-en="Dry docking" data-lt="Dokavimas">Dry docking</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS (teaser) -->
+  <section class="section" id="projects">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label eyebrow" data-en="Selected work" data-lt="Atrinkti darbai">Selected work</span>
+        <h2 data-en="Projects" data-lt="Projektai">Projects</h2>
+        <p data-en="Featured overhauls and installations — full case studies coming soon." data-lt="Atrinkti remonto ir montavimo darbai — išsamūs aprašymai netrukus.">Featured overhauls and installations — full case studies coming soon.</p>
+      </div>
+      <div class="svc-grid" style="grid-template-columns:repeat(3,1fr)">
+        <article class="svc" style="padding:0;overflow:hidden"><video class="cardvid" autoplay loop muted playsinline preload="none" poster="assets/propulsion-drydock.jpg" aria-label="Vessel propulsion and shaft work in dry dock" data-label-en="Vessel propulsion and shaft work in dry dock" data-label-lt="Laivo sraigto ir velenų darbai sausajame doke" style="aspect-ratio:16/10;object-fit:cover;width:100%;display:block"><source src="assets/propulsion-card.webm" type="video/webm"><source src="assets/propulsion-card.mp4" type="video/mp4"></video><div style="padding:22px 26px 28px"><div class="svc__n" data-en="Dry dock" data-lt="Sausasis dokas">Dry dock</div><h3 style="font-size:1.05rem" data-en="Propulsion &amp; shaft services" data-lt="Sraigto ir velenų darbai">Propulsion &amp; shaft services</h3></div></article>
+        <article class="svc" style="padding:0;overflow:hidden"><video class="cardvid" autoplay loop muted playsinline preload="none" poster="assets/gearbox-overhaul-1.jpg" aria-label="Marine reduction gearbox gears exposed during overhaul" data-label-en="Marine reduction gearbox gears exposed during overhaul" data-label-lt="Jūrinio reduktoriaus krumpliaračiai išardyti kapitalinio remonto metu" style="aspect-ratio:16/10;object-fit:cover;width:100%;display:block"><source src="assets/gearbox-card.webm" type="video/webm"><source src="assets/gearbox-card.mp4" type="video/mp4"></video><div style="padding:22px 26px 28px"><div class="svc__n" data-en="Engine room" data-lt="Mašinų skyrius">Engine room</div><h3 style="font-size:1.05rem" data-en="Gearbox overhaul" data-lt="Reduktoriaus kapitalinis remontas">Gearbox overhaul</h3></div></article>
+        <article class="svc" style="padding:0;overflow:hidden"><video class="cardvid" autoplay loop muted playsinline preload="none" poster="assets/conveyor-install.jpg" aria-label="Ship loader conveyor installation with BME branded equipment" data-label-en="Ship loader conveyor installation with BME branded equipment" data-label-lt="Laivų krautuvo konvejerio montavimas su BME įranga" style="aspect-ratio:16/10;object-fit:cover;width:100%;display:block"><source src="assets/conveyor-card.webm" type="video/webm"><source src="assets/conveyor-card.mp4" type="video/mp4"></video><div style="padding:22px 26px 28px"><div class="svc__n" data-en="Terminal" data-lt="Terminalas">Terminal</div><h3 style="font-size:1.05rem" data-en="Conveyor installation" data-lt="Konvejerio montavimas">Conveyor installation</h3></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="section why">
+    <div class="wrap why__grid">
+      <div>
+        <span class="label eyebrow" data-en="Why BME" data-lt="Kodėl BME">Why BME</span>
+        <h2 data-en="Built to keep machinery running" data-lt="Sukurta, kad įranga nesustotų">Built to keep machinery running</h2>
+        <ul class="why__list">
+          <li><b data-en="Worldwide mobilization" data-lt="Mobilizacija visame pasaulyje">Worldwide mobilization</b> <span data-en="— crews dispatched to shipyards and vessels across Europe and beyond." data-lt="— komandos siunčiamos į laivų statyklas ir laivus Europoje ir už jos ribų.">— crews dispatched to shipyards and vessels across Europe and beyond.</span></li>
+          <li><b data-en="24/7 emergency response" data-lt="Pagalba 24/7">24/7 emergency response</b> <span data-en="— because every hour of downtime affects the vessel’s operation." data-lt="— nes kiekviena prastovos valanda veikia laivo darbą.">— because every hour of downtime affects the vessel’s operation.</span></li>
+          <li><b data-en="Manufacturer-standard work" data-lt="Darbas pagal gamintojų standartus">Manufacturer-standard work</b> <span data-en="— overhauls to OEM requirements, function-tested before handover." data-lt="— kapitalinis remontas pagal gamintojų reikalavimus, patikrintas prieš perdavimą.">— overhauls to OEM requirements, function-tested before handover.</span></li>
+          <li><b data-en="One multi-disciplinary team" data-lt="Viena daugiadisciplinė komanda">One multi-disciplinary team</b> <span data-en="— mechanical, hydraulic, pneumatic and machining capability under one roof." data-lt="— mechanikos, hidraulikos, pneumatikos ir apdirbimo kompetencija vienoje vietoje.">— mechanical, hydraulic, pneumatic and machining capability under one roof.</span></li>
+        </ul>
+      </div>
+      <div class="why__media"><img src="assets/mechanical-branded.jpg" alt="BME-branded machinery being overhauled" data-alt-en="BME-branded machinery being overhauled" data-alt-lt="BME brandinta įranga remonto metu" loading="lazy"></div>
+    </div>
+  </section>
+
+  <!-- CAREERS -->
+  <section class="section careers" id="careers">
+    <div class="wrap careers__in">
+      <div>
+        <span class="label eyebrow" data-en="Careers" data-lt="Karjera">Careers</span>
+        <h2 data-en="Join the team" data-lt="Prisijunk prie komandos">Join the team</h2>
+        <p data-en="We’re always looking for talented mechanics and marine engineers who want hands-on work on real machinery, worldwide." data-lt="Visuomet ieškome talentingų mechanikų ir jūrų inžinierių, norinčių praktinio darbo su realia įranga visame pasaulyje.">We’re always looking for talented mechanics and marine engineers who want hands-on work on real machinery, worldwide.</p>
+        <a class="btn btn--primary" href="#contact"><span data-en="Get in touch" data-lt="Susisiekite">Get in touch</span> <span class="btn__i" aria-hidden="true">→</span></a>
+      </div>
+      <div class="careers__media"><img src="assets/about-corridor-2.jpg" alt="BME engineers at work on board" data-alt-en="BME engineers at work on board" data-alt-lt="BME inžinieriai dirba laive" loading="lazy"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section about" id="contact">
+    <div class="wrap contact__grid">
+      <div>
+        <span class="label eyebrow" data-en="Get in touch" data-lt="Susisiekite">Get in touch</span>
+        <h2 style="font-size:clamp(1.9rem,3.4vw,2.8rem);margin-top:20px" data-en="Need support for a mechanical project?" data-lt="Reikia pagalbos mechaniniam projektui?">Need support for a mechanical project?</h2>
+        <p class="about__body" style="margin-top:18px" data-en="Our engineers and technicians are ready to assist with mechanical, hydraulic and pneumatic systems onboard vessels and in any project where you face mechanical issues." data-lt="Mūsų inžinieriai ir technikai pasirengę padėti spręsti mechaninių, hidraulinių ir pneumatinių sistemų klausimus laivuose ir bet kuriame projekte, kuriame susiduriate su mechaniniais gedimais.">Our engineers and technicians are ready to assist with mechanical, hydraulic and pneumatic systems onboard vessels and in any project where you face mechanical issues.</p>
+        <div class="cinfo">
+          <div class="cinfo__c"><span class="label" data-en="Phone" data-lt="Telefonas">Phone</span><p>+370 699 69011</p></div>
+          <div class="cinfo__c"><span class="label" data-en="Email" data-lt="El. paštas">Email</span><p>info@servicesbme.com</p></div>
+          <div class="cinfo__c"><span class="label" data-en="Location" data-lt="Vieta">Location</span><p data-en="Klaipėda, Lithuania" data-lt="Klaipėda, Lietuva">Klaipėda, Lithuania</p></div>
+          <div class="cinfo__c"><span class="label" data-en="Response" data-lt="Reagavimas">Response</span><p data-en="24/7 worldwide" data-lt="24/7 visame pasaulyje">24/7 worldwide</p></div>
+        </div>
+      </div>
+      <form class="form" onsubmit="return false">
+        <div class="form__row">
+          <div class="field"><label for="n" data-en="Name" data-lt="Vardas">Name</label><input id="n" type="text" autocomplete="name"></div>
+          <div class="field"><label for="c" data-en="Company" data-lt="Įmonė">Company</label><input id="c" type="text" autocomplete="organization"></div>
+        </div>
+        <div class="form__row">
+          <div class="field"><label for="e" data-en="Email" data-lt="El. paštas">Email</label><input id="e" type="email" autocomplete="email"></div>
+          <div class="field"><label for="p" data-en="Phone" data-lt="Telefonas">Phone</label><input id="p" type="tel" autocomplete="tel"></div>
+        </div>
+        <div class="field"><label for="s" data-en="Service needed" data-lt="Reikalinga paslauga">Service needed</label>
+          <select id="s" required><option value="" disabled selected data-en="Select a service…" data-lt="Pasirinkite paslaugą…">Select a service…</option><option data-en="Main &amp; Auxiliary Engine Repair" data-lt="Pagrindinių ir pagalbinių variklių remontas">Main &amp; Auxiliary Engine Repair</option><option data-en="Hydraulic Systems Repair" data-lt="Hidraulinių sistemų remontas">Hydraulic Systems Repair</option><option data-en="Gearbox Maintenance &amp; Overhaul" data-lt="Reduktorių priežiūra ir kapitalinis remontas">Gearbox Maintenance &amp; Overhaul</option><option data-en="Seized Bolt Removal &amp; Bolt Manufacturing" data-lt="Prikepusių varžtų šalinimas ir gamyba">Seized Bolt Removal &amp; Bolt Manufacturing</option><option data-en="Pneumatic Systems Installation &amp; Repair" data-lt="Pneumatinių sistemų montavimas ir remontas">Pneumatic Systems Installation &amp; Repair</option><option data-en="Pump Repair" data-lt="Siurblių remontas">Pump Repair</option><option data-en="Compressor Installation &amp; Repair" data-lt="Kompresorių montavimas ir remontas">Compressor Installation &amp; Repair</option><option data-en="Manpower Supply" data-lt="Darbo jėgos nuoma">Manpower Supply</option><option data-en="Spare Parts Supply" data-lt="Atsarginių dalių tiekimas">Spare Parts Supply</option></select>
+        </div>
+        <div class="field"><label for="m" data-en="Message" data-lt="Žinutė">Message</label><textarea id="m"></textarea></div>
+        <button class="btn btn--primary" type="submit"><span data-en="Send inquiry" data-lt="Siųsti užklausą">Send inquiry</span> <span class="btn__i" aria-hidden="true">→</span></button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div class="foot__brand">
+        <a class="brand" href="#"><img class="brand__logo" src="assets/bme-mark.png" alt="BME" width="61" height="40"><span class="brand__txt"><span class="brand__name">BME</span><span class="brand__ent"><b>Services</b> · Powertech</span></span></a>
+        <p data-en="Marine and mechanical engineering, delivered on time, worldwide. Based in Klaipėda, Lithuania." data-lt="Jūrų ir mechanikos inžinerija, atliekama laiku, visame pasaulyje. Įsikūrę Klaipėdoje, Lietuvoje.">Marine and mechanical engineering, delivered on time, worldwide. Based in Klaipėda, Lithuania.</p>
+        <div class="foot__soc"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Facebook">f</a></div>
+      </div>
+      <div><h3 data-en="Services" data-lt="Paslaugos">Services</h3><a href="#services" data-en="Engine repair" data-lt="Variklių remontas">Engine repair</a><a href="#services" data-en="Hydraulics" data-lt="Hidraulika">Hydraulics</a><a href="#services" data-en="Gearbox overhaul" data-lt="Reduktorių remontas">Gearbox overhaul</a><a href="#services" data-en="Spare parts" data-lt="Atsarginės dalys">Spare parts</a></div>
+      <div><h3 data-en="Company" data-lt="Įmonė">Company</h3><a href="#about" data-en="About" data-lt="Apie mus">About</a><a href="#projects" data-en="Projects" data-lt="Projektai">Projects</a><a href="#careers" data-en="Careers" data-lt="Karjera">Careers</a><a href="#contact" data-en="Contact" data-lt="Kontaktai">Contact</a></div>
+      <div><h3 data-en="Contact" data-lt="Kontaktai">Contact</h3><a href="tel:+37069969011">+370 699 69011</a><a href="mailto:info@servicesbme.com">info@servicesbme.com</a><a href="#" data-en="Klaipėda, Lithuania" data-lt="Klaipėda, Lietuva">Klaipėda, Lithuania</a></div>
+    </div>
+    <div class="foot__bar"><span data-en="© 2026 JSC BME Services · BME Powertech" data-lt="© 2026 UAB „BME Services“ · „BME Powertech“">© 2026 JSC BME Services · BME Powertech</span><span data-en="Mechanical Solutions Experts" data-lt="Mechaninių sprendimų ekspertai">Mechanical Solutions Experts</span></div>
+  </div>
+</footer>
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var vids=document.querySelectorAll('video.cardvid');
+  var hero=document.querySelector('.hero__bg');
+  if(reduce){
+    if(hero){ hero.removeAttribute('autoplay'); try{hero.pause();}catch(e){} }
+    vids.forEach(function(v){ v.removeAttribute('autoplay'); try{v.pause();}catch(e){} });
+  } else if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){ e.target.play().catch(function(){}); }
+        else { e.target.pause(); }
+      });
+    },{threshold:0.2});
+    vids.forEach(function(v){io.observe(v);});
+  } else {
+    vids.forEach(function(v){v.play().catch(function(){});});
+  }
+})();
+(function(){
+  var KEY='bme_lang', root=document.documentElement;
+  function setLang(l){
+    if(l!=='lt') l='en';
+    root.lang=l;
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      var t=el.getAttribute('data-'+l); if(t!=null) el.textContent=t;
+    });
+    document.querySelectorAll('[data-alt-en]').forEach(function(el){
+      var t=el.getAttribute('data-alt-'+l); if(t!=null) el.setAttribute('alt',t);
+    });
+    document.querySelectorAll('[data-label-en]').forEach(function(el){
+      var t=el.getAttribute('data-label-'+l); if(t!=null) el.setAttribute('aria-label',t);
+    });
+    var tt=root.getAttribute('data-title-'+l); if(tt) document.title=tt;
+    document.querySelectorAll('.lang button').forEach(function(b){
+      b.setAttribute('aria-pressed', String(b.dataset.lang===l));
+    });
+    try{localStorage.setItem(KEY,l);}catch(e){}
+  }
+  document.querySelectorAll('.lang button').forEach(function(b){
+    b.addEventListener('click',function(){ setLang(b.dataset.lang); });
+  });
+  var saved='en';
+  try{ saved=localStorage.getItem(KEY)||'en'; }catch(e){}
+  if(saved==='lt') setLang('lt');
+
+  var tog=document.querySelector('.nav__toggle'), list=document.getElementById('navlist');
+  if(tog&&list){
+    tog.addEventListener('click',function(){
+      var open=list.classList.toggle('open');
+      tog.setAttribute('aria-expanded', String(open));
+    });
+    list.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',function(){ list.classList.remove('open'); tog.setAttribute('aria-expanded','false'); });
+    });
+  }
+})();
+</script>
+</body>
+</html>
