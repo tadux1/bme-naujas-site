@@ -342,8 +342,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
         <p data-en="Representative of the pumps, compressors and rotating equipment we strip, inspect and rebuild — on board and in the workshop." data-lt="Vaizduoja siurblius, kompresorius ir sukamąją įrangą, kurią išardome, tikriname ir atkuriame — laive ir dirbtuvėse.">Representative of the pumps, compressors and rotating equipment we strip, inspect and rebuild — on board and in the workshop.</p>
       </div>
       <div class="svc-grid" style="grid-template-columns:repeat(2,1fr)">
-        <article class="svc" style="padding:0;overflow:hidden"><video class="cardvid" autoplay loop muted playsinline preload="none" poster="assets/service-pump-poster.jpg" aria-label="Marine pump casing and impeller during overhaul in the workshop" data-label-en="Marine pump casing and impeller during overhaul in the workshop" data-label-lt="Jūrinio siurblio korpusas ir sparnuotė remonto metu dirbtuvėse" style="aspect-ratio:16/9;object-fit:cover;width:100%;display:block"><source src="assets/service-pump.webm" type="video/webm"><source src="assets/service-pump.mp4" type="video/mp4"></video><div style="padding:22px 26px 28px"><div class="svc__n" data-en="Pumps" data-lt="Siurbliai">Pumps</div><h3 style="font-size:1.05rem" data-en="Pump repair &amp; overhaul" data-lt="Siurblių remontas ir kapitalinis remontas">Pump repair &amp; overhaul</h3></div></article>
-        <article class="svc" style="padding:0;overflow:hidden"><video class="cardvid" autoplay loop muted playsinline preload="none" poster="assets/service-compressor-poster.jpg" aria-label="Marine air compressor being overhauled in a ship engine room" data-label-en="Marine air compressor being overhauled in a ship engine room" data-label-lt="Jūrinis oro kompresorius, remontuojamas laivo mašinų skyriuje" style="aspect-ratio:16/9;object-fit:cover;width:100%;display:block"><source src="assets/service-compressor.webm" type="video/webm"><source src="assets/service-compressor.mp4" type="video/mp4"></video><div style="padding:22px 26px 28px"><div class="svc__n" data-en="Compressors" data-lt="Kompresoriai">Compressors</div><h3 style="font-size:1.05rem" data-en="Compressor installation &amp; repair" data-lt="Kompresorių montavimas ir remontas">Compressor installation &amp; repair</h3></div></article>
+        <article class="svc" style="padding:0;overflow:hidden"><img src="assets/service-pump.jpg" alt="Marine pump casing and impeller during overhaul in the workshop" data-alt-en="Marine pump casing and impeller during overhaul in the workshop" data-alt-lt="Jūrinio siurblio korpusas ir sparnuotė remonto metu dirbtuvėse" style="aspect-ratio:16/9;object-fit:cover;width:100%;display:block" loading="lazy"><div style="padding:22px 26px 28px"><div class="svc__n" data-en="Pumps" data-lt="Siurbliai">Pumps</div><h3 style="font-size:1.05rem" data-en="Pump repair &amp; overhaul" data-lt="Siurblių remontas ir kapitalinis remontas">Pump repair &amp; overhaul</h3></div></article>
+        <article class="svc" style="padding:0;overflow:hidden"><img src="assets/service-compressor.jpg" alt="Marine air compressor being overhauled in a ship engine room" data-alt-en="Marine air compressor being overhauled in a ship engine room" data-alt-lt="Jūrinis oro kompresorius, remontuojamas laivo mašinų skyriuje" style="aspect-ratio:16/9;object-fit:cover;width:100%;display:block" loading="lazy"><div style="padding:22px 26px 28px"><div class="svc__n" data-en="Compressors" data-lt="Kompresoriai">Compressors</div><h3 style="font-size:1.05rem" data-en="Compressor installation &amp; repair" data-lt="Kompresorių montavimas ir remontas">Compressor installation &amp; repair</h3></div></article>
       </div>
     </div>
   </section>
@@ -538,16 +538,31 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   if(reduce){
     if(hero){ hero.removeAttribute('autoplay'); try{hero.pause();}catch(e){} }
     vids.forEach(function(v){ v.removeAttribute('autoplay'); try{v.pause();}catch(e){} });
-  } else if('IntersectionObserver' in window){
+    return;
+  }
+  // HERO: priverstinai paleidžiam; jei naršyklė blokuoja autoplay be gesto — bandom ant pirmo veiksmo
+  if(hero){
+    hero.muted = true;                       // kai kurios naršyklės groja tik jei muted nustatyta per JS
+    var tryPlay=function(){ try{ var p=hero.play(); if(p&&p.catch) p.catch(function(){}); }catch(e){} };
+    tryPlay();
+    hero.addEventListener('loadeddata', tryPlay, {once:true});
+    hero.addEventListener('canplay', tryPlay, {once:true});
+    ['click','touchstart','scroll','keydown','pointerdown'].forEach(function(ev){
+      window.addEventListener(ev, tryPlay, {once:true, passive:true});
+    });
+    document.addEventListener('visibilitychange', function(){ if(!document.hidden) tryPlay(); });
+  }
+  // KORTELĖS: groja kai matomos
+  if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(es){
       es.forEach(function(e){
-        if(e.isIntersecting){ e.target.play().catch(function(){}); }
-        else { e.target.pause(); }
+        if(e.isIntersecting){ var p=e.target.play(); if(p&&p.catch)p.catch(function(){}); }
+        else { try{e.target.pause();}catch(x){} }
       });
     },{threshold:0.2});
     vids.forEach(function(v){io.observe(v);});
   } else {
-    vids.forEach(function(v){v.play().catch(function(){});});
+    vids.forEach(function(v){ var p=v.play(); if(p&&p.catch)p.catch(function(){}); });
   }
 })();
 (function(){
