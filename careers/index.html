@@ -470,7 +470,8 @@ a.svc{display:block;text-decoration:none}
   var hero=document.querySelector('.hero__bg');
   if(hero){ hero.muted=true; var tp=function(){try{var p=hero.play(); if(p&&p.catch)p.catch(function(){});}catch(e){}}; tp();
     hero.addEventListener('loadeddata',tp,{once:true}); hero.addEventListener('canplay',tp,{once:true});
-    ['click','touchstart','scroll','keydown','pointerdown'].forEach(function(ev){window.addEventListener(ev,tp,{once:true,passive:true});}); }
+    ['click','touchstart','scroll','keydown','pointerdown'].forEach(function(ev){window.addEventListener(ev,tp,{once:true,passive:true});});
+    document.addEventListener('visibilitychange',function(){if(!document.hidden)tp();}); }  // paleidžia, kai tab'as tampa matomas (užsikrovė fone → statinis kadras be šito)
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var vids=document.querySelectorAll('video.cardvid');
   if(reduce){vids.forEach(function(v){v.removeAttribute('autoplay');try{v.pause();}catch(e){}});}
