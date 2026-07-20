@@ -251,7 +251,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .nav__list{align-items:center}          /* fix: Services(button) lygiuoti su <a> punktais (ne žemiau) */
 .nav__list li{display:flex;align-items:center}
 .nav__list li.has-sub{position:relative}
-.nav__cta{display:none}          /* rodoma tik mobiliame meniu (žr. ≤620px) */
+.nav__list li.nav__cta{display:none}   /* specifiškumas 0,2,1 > `.nav__list li` — rodoma tik mobiliam meniu (≤620px) */
 .subtog{display:inline-flex;align-items:center;gap:6px;background:none;border:0;color:var(--muted);font:inherit;font-size:.86rem;font-weight:500;cursor:pointer;padding:8px 0}
 .subtog:hover{color:#fff}
 .subtog svg{width:11px;height:11px;stroke:currentColor;stroke-width:2.2;fill:none;transition:transform .25s}
@@ -380,7 +380,7 @@ a.svc{display:block;text-decoration:none}
   .pcards{grid-template-columns:1fr}
   /* mobilus header fix: paslepiam CTA (kad hamburger tilptų), CTA keliauja į meniu */
   .hdr__tools .btn--primary{display:none}
-  .nav__cta{display:block;padding-top:6px}
+  .nav__list li.nav__cta{display:block;padding-top:6px}
   .nav__cta a{display:flex;justify-content:center;border-bottom:0;padding:15px 20px;font-size:.95rem;margin-top:6px}
   .nav__cta a::after{display:none}
 }
