@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en" data-title-en="Projects — Marine Repair &amp; Installation Work | BME Services" data-title-lt="Projektai — laivų remonto ir montavimo darbai | BME Services">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Marine Repair &amp; Installation Work | BME Services</title>
+<meta name="description" content="Selected marine engineering work by BME Services — propulsion and shaft services in dry dock, gearbox overhauls and ship loader conveyor installation. Real equipment and crews.">
+<link rel="canonical" href="https://naujas.servicesbme.com/projects/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#080E17;            /* deep base */
+  --bg-2:#0B131F;
+  --panel:#0E1826;
+  --panel-2:#111E30;
+  --line:rgba(148,178,216,.12);
+  --line-str:rgba(148,178,216,.22);
+  --text:#E9EEF5;
+  --muted:#93A3B8;
+  --muted-d:#8496AD;
+  --blue:#2E9BFF;
+  --blue-d:#0E6FE0;
+  --cyan:#54CDF6;
+  --disp:"Archivo",system-ui,sans-serif;
+  --body:"Inter",system-ui,sans-serif;
+  --wrap:1240px;
+  --pad:clamp(72px,8vw,116px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;font-family:var(--disp);font-weight:700;line-height:1.04;letter-spacing:-.01em}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+
+.label{font-family:var(--body);font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.28em;color:var(--blue)}
+.label--muted{color:var(--muted-d)}
+.eyebrow{display:inline-flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:30px;height:1px;background:var(--blue)}
+
+/* focus + skip */
+.skip{position:absolute;left:-999px;top:10px;z-index:200;background:var(--blue);color:#04101f;padding:10px 18px;border-radius:3px;font-weight:600}
+.skip:focus{left:14px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:2px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.6em;font-family:var(--body);font-weight:600;font-size:.92rem;padding:15px 28px;border-radius:3px;cursor:pointer;border:1px solid transparent;transition:.28s ease;line-height:1}
+.btn__i{font-size:1.1em;transition:transform .28s ease}
+.btn:hover .btn__i{transform:translateX(4px)}
+.btn--primary{background:var(--blue-d);color:#fff;box-shadow:0 1px 0 rgba(255,255,255,.14) inset,0 8px 22px -16px rgba(46,155,255,.5)}
+.btn--primary:hover{background:#1a78e6;transform:translateY(-2px);box-shadow:0 12px 28px -12px rgba(46,155,255,.7)}
+.btn--ghost{background:rgba(255,255,255,.02);color:var(--text);border:1px solid var(--line-str)}
+.btn--ghost:hover{border-color:var(--blue);color:#fff;background:rgba(46,155,255,.08)}
+
+/* ============ HEADER ============ */
+.topline{height:3px;background:linear-gradient(90deg,var(--cyan),var(--blue-d) 60%,transparent)}
+.hdr{position:sticky;top:0;z-index:100;background:rgba(8,14,23,.72);backdrop-filter:blur(14px) saturate(1.2);border-bottom:1px solid var(--line)}
+.hdr__in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:78px}
+.brand{display:flex;align-items:center;gap:13px}
+.brand__mark{width:34px;height:34px;flex:none;border-radius:50%;background:
+  radial-gradient(circle at 50% 50%,transparent 30%,rgba(84,205,246,.15) 31%,transparent 46%),
+  conic-gradient(from 220deg,var(--cyan),var(--blue-d),#0a3d8c,var(--cyan));
+  position:relative;box-shadow:0 0 0 1px rgba(84,205,246,.4),0 6px 18px -8px rgba(46,155,255,.6)}
+.brand__mark::after{content:"";position:absolute;inset:10px;border-radius:50%;background:var(--bg);box-shadow:inset 0 0 0 2px rgba(84,205,246,.55)}
+.brand__logo{height:40px;width:auto;flex:none;display:block}
+.brand__txt{display:flex;flex-direction:column;line-height:1}
+.brand__name{font-family:var(--disp);font-weight:800;font-size:1.4rem;letter-spacing:.04em;color:#fff}
+.brand__ent{font-size:.58rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);margin-top:5px}
+.brand__ent b{color:var(--cyan);font-weight:600}
+.nav{display:flex;align-items:center;gap:34px}
+.nav__toggle{display:none;align-items:center;justify-content:center;width:42px;height:42px;flex:none;background:rgba(255,255,255,.03);border:1px solid var(--line-str);border-radius:5px;color:#fff;cursor:pointer;padding:0}
+.nav__toggle svg{width:22px;height:22px;stroke:currentColor}
+.nav__list{display:flex;gap:30px;min-width:416px;justify-content:flex-end}
+.nav__list a{font-size:.86rem;font-weight:500;color:var(--muted);position:relative;padding:8px 0;transition:color .2s}
+.nav__list a::after{content:"";position:absolute;left:0;bottom:2px;height:1px;width:0;background:var(--cyan);transition:width .26s}
+.nav__list a:hover{color:#fff}.nav__list a:hover::after{width:100%}
+.hdr__tools{display:flex;align-items:center;gap:20px}
+.hdr__tools .btn--primary{min-width:196px;justify-content:center}
+.lang{display:flex;font-size:.76rem;font-weight:600;color:var(--muted-d);gap:2px}
+.lang button{background:none;border:0;color:var(--muted-d);cursor:pointer;font:inherit;padding:4px 6px;border-radius:2px}
+.lang button[aria-pressed="true"]{color:#fff;background:rgba(46,155,255,.16);text-decoration:underline;text-underline-offset:3px}
+.lang span{color:var(--muted-d)}
+
+/* ============ HERO ============ */
+.hero{position:relative;min-height:clamp(620px,92vh,940px);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero__bg{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center 40%;background:#04090f}
+.hero__grad{position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(180deg,rgba(8,14,23,.62) 0%,rgba(8,14,23,.28) 34%,rgba(8,14,23,.72) 78%,var(--bg) 100%),
+  linear-gradient(90deg,rgba(8,14,23,.85) 0%,rgba(8,14,23,.35) 46%,transparent 74%)}
+.hero__in{position:relative;padding:0 0 clamp(66px,8vw,104px);max-width:960px}
+.hero__eyebrow{color:var(--cyan)}
+.hero__eyebrow::before{background:var(--cyan)}
+.hero h1{font-size:clamp(2.7rem,7vw,5.7rem);font-weight:800;text-transform:uppercase;letter-spacing:-.005em;margin:26px 0 0;max-width:16ch;text-shadow:0 4px 60px rgba(0,0,0,.5);overflow-wrap:break-word}
+.hero h1 .accent{color:transparent;background:linear-gradient(92deg,var(--cyan),#8fc9ff);-webkit-background-clip:text;background-clip:text}
+.hero__sub{margin:26px 0 0;font-size:clamp(1.02rem,1.5vw,1.22rem);color:#C7D2E0;max-width:56ch;line-height:1.6;min-height:4.8em}
+.hero__cta{display:flex;gap:16px;flex-wrap:wrap;margin-top:38px}
+.hero__meta{display:flex;gap:40px;flex-wrap:wrap;margin-top:52px;padding-top:30px;border-top:1px solid var(--line)}
+.hmeta__n{font-family:var(--disp);font-weight:700;font-size:1.7rem;color:#fff;line-height:1;overflow-wrap:break-word}
+.hmeta__n--word{font-size:1.15rem;line-height:1.15}
+.hmeta__l{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-d);margin-top:8px}
+.hmeta__n .u{color:var(--cyan)}
+.scrollcue{position:absolute;right:28px;bottom:30px;writing-mode:vertical-rl;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted-d);display:flex;align-items:center;gap:14px}
+.scrollcue::after{content:"";width:1px;height:46px;background:linear-gradient(var(--cyan),transparent)}
+
+/* ============ TRUST STRIP ============ */
+.trust{border-bottom:1px solid var(--line);background:var(--bg-2)}
+.trust__in{display:flex;align-items:center;gap:40px;flex-wrap:wrap;justify-content:space-between;padding:22px 0}
+.trust__lead{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-d)}
+.trust__logos{display:flex;gap:34px;flex-wrap:wrap;align-items:center}
+.trust__logos span{font-family:var(--disp);font-weight:700;font-size:1rem;color:var(--muted);opacity:.72;letter-spacing:.04em}
+
+/* ============ SECTION SHELL ============ */
+.section{padding:var(--pad) 0}
+.sec-head{max-width:640px;margin-bottom:clamp(42px,5vw,64px)}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,3rem);margin-top:20px}
+.sec-head p{color:var(--muted);margin-top:18px;font-size:1.05rem}
+
+/* ============ SERVICES ============ */
+.services{background:linear-gradient(180deg,var(--bg),var(--bg-2))}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.svc{background:var(--panel);padding:34px 30px 38px;position:relative;transition:background .3s ease}
+.svc::before{content:"";position:absolute;left:0;top:0;height:2px;width:0;background:linear-gradient(90deg,var(--cyan),var(--blue-d));transition:width .35s ease}
+.svc:hover{background:var(--panel-2)}
+.svc:hover::before{width:100%}
+.svc__n{font-family:var(--disp);font-weight:700;font-size:.8rem;letter-spacing:.1em;color:var(--blue)}
+.svc h3{font-size:1.16rem;margin:16px 0 12px;color:#fff;letter-spacing:0;overflow-wrap:break-word}
+.svc p{color:var(--muted);font-size:.92rem;line-height:1.6}
+.svc__arw{margin-top:20px;color:var(--muted-d);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;display:inline-flex;gap:.5em;align-items:center;transition:color .25s}
+.svc:hover .svc__arw{color:var(--cyan)}
+
+/* ============ ABOUT / entities ============ */
+.about{background:var(--bg-2);position:relative}
+.about__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,88px);align-items:center}
+.about__media{position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--line-str);aspect-ratio:4/3.2}
+.about__media img{width:100%;height:100%;object-fit:cover}
+.about__media::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 55%,rgba(8,14,23,.5))}
+.about h2{font-size:clamp(1.9rem,3.4vw,2.8rem);margin-top:20px}
+.about__lead{color:#C7D2E0;font-size:1.08rem;margin-top:20px;line-height:1.7}
+.about__body{color:var(--muted);margin-top:16px}
+.ent{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+.ent__card{border:1px solid var(--line);border-radius:5px;padding:22px 22px 24px;background:rgba(255,255,255,.015)}
+.ent__card h3{font-size:1.02rem;color:#fff;letter-spacing:0}
+.ent__card .label{margin-bottom:10px}
+.ent__card p{color:var(--muted);font-size:.88rem;margin-top:8px}
+
+/* ============ STATS BAND ============ */
+.stats{position:relative;overflow:hidden;isolation:isolate;border-block:1px solid var(--line);padding:clamp(52px,6vw,80px) 0}
+.stats__bg{position:absolute;inset:0;z-index:-2;background:#050a12 url('/assets/mechanical-works-1.jpg') center/cover no-repeat}
+.stats__grad{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(5,10,18,.94),rgba(5,10,18,.7))}
+.stats__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
+.stat__n{font-family:var(--disp);font-weight:800;font-size:clamp(2.6rem,4.6vw,3.8rem);color:#fff;line-height:1;letter-spacing:-.02em;overflow-wrap:break-word}
+.stat__n--word{font-size:clamp(1.5rem,2.6vw,2.3rem);line-height:1.1;letter-spacing:0}
+.stat__n .u{color:var(--cyan)}
+.stat__l{color:var(--muted);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;margin-top:12px;max-width:18ch}
+
+/* ============ CONTACT ============ */
+.contact__grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(36px,5vw,72px)}
+.cinfo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:32px}
+.cinfo__c{border:1px solid var(--line);border-radius:5px;padding:20px;background:var(--panel)}
+.cinfo__c .label{color:var(--muted-d);font-size:.66rem}
+.cinfo__c p{margin-top:10px;color:#fff;font-weight:500;font-size:.98rem}
+.form{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:clamp(26px,3vw,38px)}
+.form__row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{margin-top:16px}
+.field label{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-d);margin-bottom:8px}
+.field input,.field select,.field textarea{width:100%;background:var(--bg);border:1px solid var(--line-str);border-radius:4px;padding:13px 14px;color:var(--text);font:inherit;font-size:.94rem;transition:border-color .2s}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue)}
+.field textarea{resize:vertical;min-height:110px}
+.form .btn{margin-top:22px;width:100%;justify-content:center}
+
+/* ============ FOOTER ============ */
+.foot{background:var(--bg);border-top:1px solid var(--line);padding:clamp(56px,7vw,88px) 0 34px}
+.foot__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.foot h3{font-size:.74rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-d);margin-bottom:18px}
+.foot a{display:block;color:var(--muted);font-size:.9rem;padding:5px 0;transition:color .2s}
+.foot a:hover{color:var(--cyan)}
+.foot__brand p{color:var(--muted);font-size:.9rem;margin-top:16px;max-width:34ch}
+.foot__soc{display:flex;gap:12px;margin-top:20px}
+.foot__soc a{width:38px;height:38px;border:1px solid var(--line-str);border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:600;color:var(--muted)}
+.foot__soc a:hover{border-color:var(--blue);color:#fff}
+.foot__bar{margin-top:52px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--muted-d);font-size:.82rem}
+
+/* ============ PROCESS ============ */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.step{background:var(--panel);padding:32px 28px 36px}
+.step__n{font-family:var(--disp);font-weight:800;font-size:2rem;color:transparent;-webkit-text-stroke:1px var(--blue)}
+.step h3{font-size:1.05rem;color:#fff;margin:14px 0 10px;letter-spacing:0}
+.step p{color:var(--muted);font-size:.9rem;line-height:1.6}
+/* ============ INDUSTRIES ============ */
+.ind__grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,80px);align-items:center}
+.ind__media{border-radius:6px;overflow:hidden;border:1px solid var(--line-str);aspect-ratio:4/3;position:relative}
+.ind__media img{width:100%;height:100%;object-fit:cover}
+.ind__media::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 55%,rgba(8,14,23,.45))}
+.ind__list{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+.ind__list li{display:flex;gap:12px;align-items:flex-start;color:#C7D2E0;font-size:.98rem;padding:16px 0;border-top:1px solid var(--line)}
+.ind__list li::before{content:"";width:8px;height:8px;margin-top:7px;flex:none;background:var(--blue);border-radius:2px;transform:rotate(45deg)}
+/* ============ GALLERY ============ */
+.gallery{column-count:4;column-gap:12px}
+.gal{margin:0 0 12px;break-inside:avoid;border-radius:5px;overflow:hidden;border:1px solid var(--line);position:relative;background:var(--panel)}
+.gal img{width:100%;display:block;transition:transform .55s ease}
+.gal:hover img{transform:scale(1.05)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 12px;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:#dbe6f4;background:linear-gradient(transparent,rgba(6,12,22,.82));opacity:0;transition:opacity .3s}
+.gal:hover figcaption{opacity:1}
+/* ============ WHY / CAREERS ============ */
+.why__grid,.careers__in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(40px,6vw,80px);align-items:center}
+.why__list{margin-top:24px;display:grid}
+.why__list li{padding:18px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.98rem;line-height:1.6}
+.why__list li:last-child{border-bottom:1px solid var(--line)}
+.why__list li b{color:#fff;font-weight:600}
+.why__media,.careers__media{border-radius:6px;overflow:hidden;border:1px solid var(--line-str);aspect-ratio:5/4}
+.why__media img,.careers__media img{width:100%;height:100%;object-fit:cover}
+.careers{background:var(--bg-2)}
+.careers__in p{color:#C7D2E0;font-size:1.05rem;margin-top:18px;line-height:1.7;max-width:46ch}
+.careers .btn{margin-top:28px}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:1000px){
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .about__grid,.contact__grid{grid-template-columns:1fr}
+  .stats__grid{grid-template-columns:repeat(2,1fr);gap:34px}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .ind__grid,.why__grid,.careers__in{grid-template-columns:1fr}
+  .why__media,.careers__media,.ind__media{aspect-ratio:16/10}
+  .gallery{column-count:3}
+  .foot__grid{grid-template-columns:1fr 1fr}
+  .nav__toggle{display:inline-flex}
+  .hdr__tools .btn--primary{min-width:0}
+  .nav__list{position:absolute;top:100%;left:0;right:0;display:none;flex-direction:column;gap:0;min-width:0;background:rgba(8,14,23,.98);backdrop-filter:blur(14px) saturate(1.2);border-bottom:1px solid var(--line);padding:8px 28px 18px;max-height:80vh;overflow:auto}
+  .nav__list.open{display:flex}
+  .nav__list li{width:100%}
+  .nav__list a{display:block;padding:13px 2px;font-size:1rem;border-bottom:1px solid var(--line)}
+  .nav__list a::after{display:none}
+}
+@media(max-width:620px){
+  .svc-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .ind__list{grid-template-columns:1fr}
+  .gallery{column-count:2}
+  .form__row,.cinfo,.ent{grid-template-columns:1fr}
+  .hero__meta{gap:26px}
+  .foot__grid{grid-template-columns:1fr}
+  .scrollcue{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* ===== DROPDOWN NAV ===== */
+.nav__list li.has-sub{position:relative}
+.subtog{display:inline-flex;align-items:center;gap:6px;background:none;border:0;color:var(--muted);font:inherit;font-size:.86rem;font-weight:500;cursor:pointer;padding:8px 0}
+.subtog:hover{color:#fff}
+.subtog svg{width:11px;height:11px;stroke:currentColor;stroke-width:2.2;fill:none;transition:transform .25s}
+li.has-sub[aria-expanded="true"] .subtog svg,li.has-sub:hover .subtog svg{transform:rotate(180deg)}
+.submenu{position:absolute;top:100%;left:-16px;margin-top:6px;min-width:560px;background:rgba(11,19,31,.98);backdrop-filter:blur(14px) saturate(1.2);border:1px solid var(--line-str);border-radius:8px;padding:14px;box-shadow:0 24px 60px -24px rgba(0,0,0,.8);display:grid;grid-template-columns:1fr 1fr;gap:4px;opacity:0;visibility:hidden;transform:translateY(8px);transition:.22s ease;z-index:120}
+li.has-sub:hover .submenu,li.has-sub:focus-within .submenu,li.has-sub[aria-expanded="true"] .submenu{opacity:1;visibility:visible;transform:translateY(0)}
+.submenu a{display:flex!important;flex-direction:column;gap:3px;padding:11px 14px!important;border-radius:6px;border-bottom:0!important}
+.submenu a::after{display:none}
+.submenu a:hover{background:rgba(46,155,255,.1)}
+.submenu a b{font-family:var(--disp);font-weight:600;font-size:.9rem;color:#fff;letter-spacing:0}
+.submenu a span{font-size:.76rem;color:var(--muted-d)}
+.submenu__all{grid-column:1/-1;margin-top:6px;border-top:1px solid var(--line)}
+.submenu__all a{flex-direction:row!important;align-items:center;gap:.5em;color:var(--cyan)!important;font-weight:600;font-size:.84rem}
+.submenu__all a b{color:var(--cyan)}
+
+/* ===== PAGE HERO (inner) ===== */
+.phero{position:relative;min-height:clamp(340px,50vh,480px);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate;border-bottom:1px solid var(--line)}
+.phero__bg{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center 42%;background:#04090f}
+.phero__grad{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,14,23,.6),rgba(8,14,23,.4) 40%,rgba(8,14,23,.82) 88%,var(--bg)),linear-gradient(90deg,rgba(8,14,23,.86),rgba(8,14,23,.3) 60%,transparent)}
+.phero__in{position:relative;padding:clamp(40px,6vw,72px) 0 clamp(34px,4vw,54px);max-width:800px}
+.phero h1{font-size:clamp(2rem,4.6vw,3.5rem);font-weight:800;text-transform:uppercase;letter-spacing:-.01em;margin:18px 0 0;max-width:20ch;text-shadow:0 4px 50px rgba(0,0,0,.5)}
+.phero h1 .accent{color:transparent;background:linear-gradient(92deg,var(--cyan),#8fc9ff);-webkit-background-clip:text;background-clip:text}
+.phero__sub{margin:20px 0 0;font-size:clamp(1rem,1.4vw,1.16rem);color:#C7D2E0;max-width:60ch;line-height:1.6}
+.phero__cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.phero .eyebrow::before,.phero__eyebrow::before{background:var(--cyan)}
+.phero__eyebrow{color:var(--cyan)}
+
+/* ===== BREADCRUMB ===== */
+.crumb{background:var(--bg-2);border-bottom:1px solid var(--line)}
+.crumb ol{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:14px 0;font-size:.78rem;color:var(--muted-d)}
+.crumb li{display:flex;align-items:center;gap:8px}
+.crumb li+li::before{content:"›";color:var(--muted-d);opacity:.6}
+.crumb a{color:var(--muted-d);transition:color .2s}
+.crumb a:hover{color:var(--cyan)}
+.crumb [aria-current]{color:var(--text)}
+
+/* ===== SCOPE / CHECKLIST ===== */
+.scope-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(36px,5vw,72px);align-items:start}
+.scope{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.scope li{background:var(--panel);padding:20px 22px;display:flex;gap:12px;align-items:flex-start;font-size:.95rem;color:#C7D2E0;line-height:1.55}
+.scope li::before{content:"";width:18px;height:18px;margin-top:2px;flex:none;border-radius:4px;background:linear-gradient(135deg,var(--cyan),var(--blue-d));position:relative}
+.scope li::after{content:"";position:absolute;width:6px;height:10px;margin:5px 0 0 6px;border:2px solid #04101f;border-top:0;border-left:0;transform:rotate(42deg)}
+.scope li{position:relative}
+.scope-aside{border:1px solid var(--line-str);border-radius:6px;overflow:hidden;position:relative;aspect-ratio:4/3.4}
+.scope-aside img{width:100%;height:100%;object-fit:cover}
+.scope-aside::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 55%,rgba(8,14,23,.5))}
+
+/* ===== APPLICATIONS ===== */
+.apps__list{display:grid;grid-template-columns:1fr 1fr;gap:0 26px;margin-top:26px}
+.apps__list li{display:flex;gap:12px;align-items:flex-start;color:#C7D2E0;font-size:.98rem;padding:15px 0;border-top:1px solid var(--line)}
+.apps__list li::before{content:"";width:8px;height:8px;margin-top:7px;flex:none;background:var(--blue);border-radius:2px;transform:rotate(45deg)}
+
+/* ===== SEE ALSO (inline interlink) ===== */
+.seealso{margin-top:30px;padding:18px 22px;border-left:2px solid var(--blue);background:rgba(46,155,255,.05);border-radius:0 5px 5px 0;font-size:.96rem;color:var(--muted)}
+.seealso a{color:var(--cyan);font-weight:500;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(84,205,246,.4)}
+.seealso a:hover{text-decoration-color:var(--cyan)}
+
+/* ===== FAQ (native details) ===== */
+.faq{border:1px solid var(--line);border-radius:6px;overflow:hidden;max-width:820px}
+.faq details{border-top:1px solid var(--line);background:var(--panel)}
+.faq details:first-child{border-top:0}
+.faq summary{list-style:none;cursor:pointer;padding:22px 24px;font-family:var(--disp);font-weight:600;font-size:1.02rem;color:#fff;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--body);font-weight:400;font-size:1.5rem;color:var(--blue);flex:none;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details[open] summary{color:var(--cyan)}
+.faq__a{padding:0 24px 22px;color:var(--muted);font-size:.96rem;line-height:1.65;max-width:70ch}
+
+/* ===== RELATED SERVICES ===== */
+.related{background:var(--bg-2)}
+a.svc{display:block;text-decoration:none}
+.svc--link .svc__arw{color:var(--cyan)}
+
+/* ===== VALUES (about) ===== */
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.value{background:var(--panel);padding:30px 28px 34px}
+.value__n{font-family:var(--disp);font-weight:800;font-size:1.5rem;color:transparent;-webkit-text-stroke:1px var(--blue)}
+.value h3{font-size:1.08rem;color:#fff;margin:14px 0 10px;letter-spacing:0}
+.value p{color:var(--muted);font-size:.92rem;line-height:1.6}
+
+/* ===== CTA BAND ===== */
+.ctaband{position:relative;overflow:hidden;isolation:isolate;border-block:1px solid var(--line);padding:clamp(48px,6vw,76px) 0;text-align:center}
+.ctaband__bg{position:absolute;inset:0;z-index:-2;background:#050a12 center/cover no-repeat}
+.ctaband__grad{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(5,10,18,.92),rgba(5,10,18,.78))}
+.ctaband h2{font-size:clamp(1.7rem,3.2vw,2.6rem);max-width:20ch;margin:0 auto}
+.ctaband p{color:var(--muted);margin:16px auto 0;max-width:52ch;font-size:1.04rem}
+.ctaband .btn{margin-top:30px}
+
+/* ===== PROJECT / SECTOR CARDS ===== */
+.pcards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pcard{border:1px solid var(--line);border-radius:7px;overflow:hidden;background:var(--panel);display:flex;flex-direction:column}
+.pcard__media{aspect-ratio:16/10;overflow:hidden;position:relative}
+.pcard__media img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.pcard:hover .pcard__media img{transform:scale(1.05)}
+.pcard__body{padding:24px 24px 26px;flex:1;display:flex;flex-direction:column}
+.pcard__tag{font-family:var(--disp);font-weight:700;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.pcard h3{font-size:1.12rem;color:#fff;margin:12px 0 10px;letter-spacing:0}
+.pcard p{color:var(--muted);font-size:.92rem;line-height:1.6;flex:1}
+.pcard__lk{margin-top:16px;color:var(--muted-d);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;display:inline-flex;gap:.5em;align-items:center;transition:color .25s}
+.pcard:hover .pcard__lk{color:var(--cyan)}
+
+/* ===== PROSE ===== */
+.prose{max-width:760px}
+.prose p{color:var(--muted);font-size:1.04rem;line-height:1.75;margin-top:20px}
+.prose p:first-child{color:#C7D2E0;font-size:1.1rem}
+.lead{color:#C7D2E0!important;font-size:1.12rem!important;line-height:1.7!important}
+
+@media(max-width:1000px){
+  .submenu{position:static;min-width:0;grid-template-columns:1fr;opacity:1;visibility:visible;transform:none;box-shadow:none;background:transparent;border:0;padding:0 0 6px;display:none}
+  li.has-sub[aria-expanded="true"] .submenu{display:grid}
+  .scope-wrap{grid-template-columns:1fr}
+  .scope{grid-template-columns:1fr 1fr}
+  .values{grid-template-columns:1fr}
+  .pcards{grid-template-columns:1fr 1fr}
+  .apps__list{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .scope{grid-template-columns:1fr}
+  .pcards{grid-template-columns:1fr}
+}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://naujas.servicesbme.com/"}, {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://naujas.servicesbme.com/projects/"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main" data-en="Skip to content" data-lt="Pereiti prie turinio">Skip to content</a><div class="topline"></div>
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="/" aria-label="BME — Services and Powertech">
+      <img class="brand__logo" src="/assets/bme-mark.png" alt="BME" width="61" height="40">
+      <span class="brand__txt"><span class="brand__name">BME</span>
+      <span class="brand__ent"><b>Services</b> · Powertech</span></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list" id="navlist"><li class="has-sub" aria-expanded="false"><button type="button" class="subtog" aria-haspopup="true" aria-expanded="false"><span data-en="Services" data-lt="Paslaugos">Services</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><div class="submenu" role="menu"><a href="/services/main-engine-repair/"><b data-en="Main &amp; Auxiliary Engine Repair" data-lt="Pagrindinių ir pagalbinių variklių remontas">Main &amp; Auxiliary Engine Repair</b><span data-en="marine engine repair" data-lt="laivų variklių remontas">marine engine repair</span></a><a href="/services/hydraulic-systems-repair/"><b data-en="Hydraulic Systems Repair" data-lt="Hidraulinių sistemų remontas">Hydraulic Systems Repair</b><span data-en="hydraulic systems repair" data-lt="hidraulinių sistemų remontas">hydraulic systems repair</span></a><a href="/services/gearbox-overhaul/"><b data-en="Gearbox Maintenance &amp; Overhaul" data-lt="Reduktorių priežiūra ir kapitalinis remontas">Gearbox Maintenance &amp; Overhaul</b><span data-en="marine gearbox overhaul" data-lt="reduktorių remontas">marine gearbox overhaul</span></a><a href="/services/seized-bolt-removal/"><b data-en="Seized Bolt Removal &amp; Bolt Manufacturing" data-lt="Prikepusių varžtų šalinimas ir gamyba">Seized Bolt Removal &amp; Bolt Manufacturing</b><span data-en="seized bolt removal" data-lt="prikepusių varžtų šalinimas">seized bolt removal</span></a><a href="/services/pneumatic-systems/"><b data-en="Pneumatic Systems Installation &amp; Repair" data-lt="Pneumatinių sistemų montavimas ir remontas">Pneumatic Systems Installation &amp; Repair</b><span data-en="marine pneumatic systems" data-lt="pneumatinių sistemų remontas">marine pneumatic systems</span></a><a href="/services/pump-repair/"><b data-en="Pump Repair" data-lt="Siurblių remontas">Pump Repair</b><span data-en="marine pump repair" data-lt="siurblių remontas">marine pump repair</span></a><a href="/services/compressor-repair/"><b data-en="Compressor Installation &amp; Repair" data-lt="Kompresorių montavimas ir remontas">Compressor Installation &amp; Repair</b><span data-en="marine compressor repair" data-lt="kompresorių remontas">marine compressor repair</span></a><a href="/services/manpower-supply/"><b data-en="Manpower Supply" data-lt="Darbo jėgos nuoma">Manpower Supply</b><span data-en="marine manpower supply" data-lt="laivų mechanikų nuoma">marine manpower supply</span></a><a href="/services/spare-parts-supply/"><b data-en="Spare Parts Supply" data-lt="Atsarginių dalių tiekimas">Spare Parts Supply</b><span data-en="marine spare parts" data-lt="atsarginės dalys laivams">marine spare parts</span></a><div class="submenu__all"><a href="/services/"><b data-en="View all services" data-lt="Visos paslaugos">View all services</b><span aria-hidden="true">→</span></a></div></div></li><li><a href="/about/" data-en="About" data-lt="Apie mus">About</a></li><li><a href="/projects/" aria-current="page" data-en="Projects" data-lt="Projektai">Projects</a></li><li><a href="/industries/" data-en="Industries" data-lt="Sektoriai">Industries</a></li><li><a href="/careers/" data-en="Careers" data-lt="Karjera">Careers</a></li><li><a href="/contact/" data-en="Contact" data-lt="Kontaktai">Contact</a></li></ul>
+      <div class="hdr__tools">
+        <div class="lang" role="group" aria-label="Language / Kalba"><button type="button" data-lang="en" aria-pressed="true">EN</button><span>/</span><button type="button" data-lang="lt" aria-pressed="false">LT</button></div>
+        <a class="btn btn--primary" href="/contact/"><span data-en="Get a quote" data-lt="Gauti pasiūlymą">Get a quote</span> <span class="btn__i" aria-hidden="true">→</span></a>
+        <button type="button" class="nav__toggle" aria-expanded="false" aria-controls="navlist" aria-label="Menu" data-label-en="Menu" data-label-lt="Meniu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      </div>
+    </nav>
+  </div>
+</header><main id="main"><div class="crumb"><div class="wrap"><ol><li><a href="/" data-en="Home" data-lt="Pradžia">Home</a></li><li><span aria-current="page" data-en="Projects" data-lt="Projektai">Projects</span></li></ol></div></div><section class="phero">
+      <img class="phero__bg" src="/assets/propulsion-drydock.jpg" alt="" aria-hidden="true">
+      <div class="phero__grad" aria-hidden="true"></div>
+      <div class="wrap phero__in">
+        <span class="label eyebrow phero__eyebrow" data-en="Selected work" data-lt="Atrinkti darbai">Selected work</span>
+        <h1 data-en="Selected engineering work" data-lt="Atrinkti inžinerijos darbai">Selected engineering work</h1>
+        <p class="phero__sub" data-en="Featured overhauls and installations from the workshop, the dock and on board — our own equipment and crews, not stock imagery. Full case studies are added as each project is completed." data-lt="Atrinkti remonto ir montavimo darbai iš dirbtuvių, doko ir laivo — mūsų pačių įranga ir komandos, ne stock nuotraukos. Išsamūs aprašymai pridedami užbaigus kiekvieną projektą.">Featured overhauls and installations from the workshop, the dock and on board — our own equipment and crews, not stock imagery. Full case studies are added as each project is completed.</p>
+      </div>
+    </section><section class="section"><div class="wrap"><div class="pcards"><article class="pcard"><div class="pcard__media"><img src="/assets/propulsion-drydock.jpg" alt="" data-alt-en="Propulsion &amp; shaft services" data-alt-lt="Sraigto ir velenų darbai" loading="lazy"></div><div class="pcard__body"><span class="pcard__tag" data-en="Dry dock" data-lt="Sausasis dokas">Dry dock</span><h3 data-en="Propulsion &amp; shaft services" data-lt="Sraigto ir velenų darbai">Propulsion &amp; shaft services</h3><p data-en="Propeller, stern gear and shaft work carried out with the vessel in dry dock — inspection, alignment and refit to return the propulsion line to service." data-lt="Sraigto, laivagalio įrangos ir veleno darbai atlikti laivui esant sausajame doke — apžiūra, centravimas ir surinkimas, kad varymo linija grįžtų į eksploataciją.">Propeller, stern gear and shaft work carried out with the vessel in dry dock — inspection, alignment and refit to return the propulsion line to service.</p><a href="/services/main-engine-repair/" class="pcard__lk"><span data-en="Related service →" data-lt="Susijusi paslauga →">Related service →</span></a></div></article><article class="pcard"><div class="pcard__media"><img src="/assets/gearbox-overhaul-1.jpg" alt="" data-alt-en="Marine gearbox overhaul" data-alt-lt="Jūrinio reduktoriaus kapitalinis remontas" loading="lazy"></div><div class="pcard__body"><span class="pcard__tag" data-en="Engine room" data-lt="Mašinų skyrius">Engine room</span><h3 data-en="Marine gearbox overhaul" data-lt="Jūrinio reduktoriaus kapitalinis remontas">Marine gearbox overhaul</h3><p data-en="Reduction gearbox stripped, inspected and rebuilt — bearings and seals renewed, gears measured and the unit reassembled and tested before handover." data-lt="Reduktorius išardytas, patikrintas ir surinktas iš naujo — pakeisti guoliai ir sandarikliai, išmatuoti krumpliaračiai, mazgas surinktas ir išbandytas prieš perdavimą.">Reduction gearbox stripped, inspected and rebuilt — bearings and seals renewed, gears measured and the unit reassembled and tested before handover.</p><a href="/services/gearbox-overhaul/" class="pcard__lk"><span data-en="Related service →" data-lt="Susijusi paslauga →">Related service →</span></a></div></article><article class="pcard"><div class="pcard__media"><img src="/assets/conveyor-install.jpg" alt="" data-alt-en="Ship loader conveyor installation" data-alt-lt="Laivų krautuvo konvejerio montavimas" loading="lazy"></div><div class="pcard__body"><span class="pcard__tag" data-en="Terminal" data-lt="Terminalas">Terminal</span><h3 data-en="Ship loader conveyor installation" data-lt="Laivų krautuvo konvejerio montavimas">Ship loader conveyor installation</h3><p data-en="Conveyor and material-handling equipment installed at a bulk terminal — mechanical assembly, alignment and commissioning of the loading line." data-lt="Konvejerio ir medžiagų tvarkymo įrangos montavimas biriųjų krovinių terminale — mechaninis surinkimas, centravimas ir pakrovimo linijos paleidimas.">Conveyor and material-handling equipment installed at a bulk terminal — mechanical assembly, alignment and commissioning of the loading line.</p><a href="/services/manpower-supply/" class="pcard__lk"><span data-en="Related service →" data-lt="Susijusi paslauga →">Related service →</span></a></div></article></div>
+      <p class="prose" style="margin-top:36px"><span data-en="This is a selection of representative work. Detailed project case studies — with scope, equipment and results — are published as each engagement is completed and client approval is in place. To discuss a similar project, get in touch with our engineers." data-lt="Tai reprezentatyvių darbų pavyzdžiai. Išsamūs projektų aprašymai — su apimtimi, įranga ir rezultatais — skelbiami užbaigus kiekvieną darbą ir gavus kliento sutikimą. Norėdami aptarti panašų projektą, susisiekite su mūsų inžinieriais.">This is a selection of representative work. Detailed project case studies — with scope, equipment and results — are published as each engagement is completed and client approval is in place. To discuss a similar project, get in touch with our engineers.</span></p>
+      </div></section><section class="ctaband"><div class="ctaband__bg" style="background-image:url('/assets/conveyor-install.jpg')" aria-hidden="true"></div><div class="ctaband__grad" aria-hidden="true"></div>
+    <div class="wrap">
+    <h2 data-en="Facing a mechanical problem on board?" data-lt="Susidūrėte su mechaniniu gedimu laive?">Facing a mechanical problem on board?</h2>
+    <p data-en="Tell us the fault and the vessel’s location — our engineers respond fast, worldwide." data-lt="Aprašykite gedimą ir laivo vietą — mūsų inžinieriai reaguoja greitai, visame pasaulyje.">Tell us the fault and the vessel’s location — our engineers respond fast, worldwide.</p>
+    <a class="btn btn--primary" href="/contact/"><span data-en="Request a quote" data-lt="Užklausti pasiūlymo">Request a quote</span> <span class="btn__i" aria-hidden="true">→</span></a>
+    </div></section></main><footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div class="foot__brand">
+        <a class="brand" href="/"><img class="brand__logo" src="/assets/bme-mark.png" alt="BME" width="61" height="40"><span class="brand__txt"><span class="brand__name">BME</span><span class="brand__ent"><b>Services</b> · Powertech</span></span></a>
+        <p data-en="Marine and mechanical engineering, delivered on time, worldwide. Based in Klaipėda, Lithuania." data-lt="Jūrų ir mechanikos inžinerija, atliekama laiku, visame pasaulyje. Įsikūrę Klaipėdoje, Lietuvoje.">Marine and mechanical engineering, delivered on time, worldwide. Based in Klaipėda, Lithuania.</p>
+        <div class="foot__soc"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Facebook">f</a></div>
+      </div>
+      <div><h3 data-en="Services" data-lt="Paslaugos">Services</h3><a href="/services/main-engine-repair/" data-en="Main &amp; Auxiliary Engine Repair" data-lt="Pagrindinių ir pagalbinių variklių remontas">Main &amp; Auxiliary Engine Repair</a><a href="/services/hydraulic-systems-repair/" data-en="Hydraulic Systems Repair" data-lt="Hidraulinių sistemų remontas">Hydraulic Systems Repair</a><a href="/services/gearbox-overhaul/" data-en="Gearbox Maintenance &amp; Overhaul" data-lt="Reduktorių priežiūra ir kapitalinis remontas">Gearbox Maintenance &amp; Overhaul</a><a href="/services/seized-bolt-removal/" data-en="Seized Bolt Removal &amp; Bolt Manufacturing" data-lt="Prikepusių varžtų šalinimas ir gamyba">Seized Bolt Removal &amp; Bolt Manufacturing</a><a href="/services/pneumatic-systems/" data-en="Pneumatic Systems Installation &amp; Repair" data-lt="Pneumatinių sistemų montavimas ir remontas">Pneumatic Systems Installation &amp; Repair</a><a href="/services/pump-repair/" data-en="Pump Repair" data-lt="Siurblių remontas">Pump Repair</a><a href="/services/" data-en="All services" data-lt="Visos paslaugos">All services</a></div>
+      <div><h3 data-en="Company" data-lt="Įmonė">Company</h3><a href="/about/" data-en="About" data-lt="Apie mus">About</a><a href="/projects/" data-en="Projects" data-lt="Projektai">Projects</a><a href="/industries/" data-en="Industries" data-lt="Sektoriai">Industries</a><a href="/careers/" data-en="Careers" data-lt="Karjera">Careers</a></div>
+      <div><h3 data-en="Contact" data-lt="Kontaktai">Contact</h3><a href="tel:+37069969011">+370 699 69011</a><a href="mailto:info@servicesbme.com">info@servicesbme.com</a><a href="/contact/" data-en="Klaipėda, Lithuania" data-lt="Klaipėda, Lietuva">Klaipėda, Lithuania</a></div>
+    </div>
+    <div class="foot__bar"><span data-en="© 2026 JSC BME Services · BME Powertech" data-lt="© 2026 UAB „BME Services“ · „BME Powertech“">© 2026 JSC BME Services · BME Powertech</span><span data-en="Mechanical Solutions Experts" data-lt="Mechaninių sprendimų ekspertai">Mechanical Solutions Experts</span></div>
+  </div>
+</footer><script>
+(function(){ // lang
+  var KEY='bme_lang', root=document.documentElement;
+  function setLang(l){
+    if(l!=='lt') l='en'; root.lang=l;
+    document.querySelectorAll('[data-en]').forEach(function(el){var t=el.getAttribute('data-'+l); if(t!=null) el.textContent=t;});
+    document.querySelectorAll('[data-alt-en]').forEach(function(el){var t=el.getAttribute('data-alt-'+l); if(t!=null) el.setAttribute('alt',t);});
+    document.querySelectorAll('[data-label-en]').forEach(function(el){var t=el.getAttribute('data-label-'+l); if(t!=null) el.setAttribute('aria-label',t);});
+    var tt=root.getAttribute('data-title-'+l); if(tt) document.title=tt;
+    document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed', String(b.dataset.lang===l));});
+    try{localStorage.setItem(KEY,l);}catch(e){}
+  }
+  document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang);});});
+  var saved='en'; try{saved=localStorage.getItem(KEY)||'en';}catch(e){} if(saved==='lt') setLang('lt');
+  window.__setLang=setLang;
+})();
+(function(){ // mobile nav + dropdown
+  var tog=document.querySelector('.nav__toggle'), list=document.getElementById('navlist');
+  if(tog&&list){
+    tog.addEventListener('click',function(){var o=list.classList.toggle('open'); tog.setAttribute('aria-expanded',String(o));});
+  }
+  var sub=document.querySelector('.nav__list li.has-sub'), stog=sub&&sub.querySelector('.subtog');
+  if(sub&&stog){
+    stog.addEventListener('click',function(e){
+      e.preventDefault();
+      var open=sub.getAttribute('aria-expanded')==='true';
+      sub.setAttribute('aria-expanded',String(!open)); stog.setAttribute('aria-expanded',String(!open));
+    });
+    document.addEventListener('click',function(e){ if(!sub.contains(e.target)){sub.setAttribute('aria-expanded','false'); stog.setAttribute('aria-expanded','false');} });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape'){sub.setAttribute('aria-expanded','false'); stog.setAttribute('aria-expanded','false');} });
+  }
+})();
+(function(){ // hero/card video (jei yra)
+  var hero=document.querySelector('.hero__bg');
+  if(hero){ hero.muted=true; var tp=function(){try{var p=hero.play(); if(p&&p.catch)p.catch(function(){});}catch(e){}}; tp();
+    hero.addEventListener('loadeddata',tp,{once:true}); hero.addEventListener('canplay',tp,{once:true});
+    ['click','touchstart','scroll','keydown','pointerdown'].forEach(function(ev){window.addEventListener(ev,tp,{once:true,passive:true});}); }
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var vids=document.querySelectorAll('video.cardvid');
+  if(reduce){vids.forEach(function(v){v.removeAttribute('autoplay');try{v.pause();}catch(e){}});}
+  else if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var p=e.target.play();if(p&&p.catch)p.catch(function(){});}else{try{e.target.pause();}catch(x){}}});},{threshold:.2}); vids.forEach(function(v){io.observe(v);});}
+  else {vids.forEach(function(v){var p=v.play(); if(p&&p.catch)p.catch(function(){});});}
+})();
+</script>
+</body>
+</html>
