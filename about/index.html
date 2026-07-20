@@ -248,6 +248,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 
 /* ===== DROPDOWN NAV ===== */
+.nav__list{align-items:center}          /* fix: Services(button) lygiuoti su <a> punktais (ne žemiau) */
+.nav__list li{display:flex;align-items:center}
 .nav__list li.has-sub{position:relative}
 .subtog{display:inline-flex;align-items:center;gap:6px;background:none;border:0;color:var(--muted);font:inherit;font-size:.86rem;font-weight:500;cursor:pointer;padding:8px 0}
 .subtog:hover{color:#fff}
@@ -356,7 +358,14 @@ a.svc{display:block;text-decoration:none}
 .prose p:first-child{color:#C7D2E0;font-size:1.1rem}
 .lead{color:#C7D2E0!important;font-size:1.12rem!important;line-height:1.7!important}
 
+/* ===== REAL-FOOTAGE MEDIA (video kaip img) ===== */
+.about__media video,.why__media video,.careers__media video{width:100%;height:100%;object-fit:cover;display:block}
+.media-tag{position:absolute;left:14px;bottom:12px;z-index:2;display:inline-flex;align-items:center;gap:8px;font-size:.66rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#dbe6f4;background:rgba(8,14,23,.6);backdrop-filter:blur(6px);border:1px solid var(--line-str);border-radius:100px;padding:6px 12px}
+.media-tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 3px rgba(84,205,246,.25)}
+
 @media(max-width:1000px){
+  .nav__list{align-items:stretch}
+  .nav__list li{display:block}
   .submenu{position:static;min-width:0;grid-template-columns:1fr;opacity:1;visibility:visible;transform:none;box-shadow:none;background:transparent;border:0;padding:0 0 6px;display:none}
   li.has-sub[aria-expanded="true"] .submenu{display:grid}
   .scope-wrap{grid-template-columns:1fr}
@@ -399,7 +408,7 @@ a.svc{display:block;text-decoration:none}
         <p class="phero__sub" data-en="For more than 15 years, BME Services has provided professional marine, mechanical and hydraulic engineering for marine and industrial projects — based in Klaipėda, Lithuania, with most works carried out overseas." data-lt="Daugiau nei 15 metų BME Services teikia profesionalias jūrų, mechanikos ir hidraulikos inžinerijos paslaugas jūriniams ir pramoniniams projektams — įsikūrusi Klaipėdoje, Lietuvoje; didžioji dalis darbų atliekama užsienyje.">For more than 15 years, BME Services has provided professional marine, mechanical and hydraulic engineering for marine and industrial projects — based in Klaipėda, Lithuania, with most works carried out overseas.</p>
       </div>
     </section><section class="section"><div class="wrap about__grid">
-      <div class="about__media"><img src="/assets/about-workshop.jpg" alt="" data-alt-en="BME Services crew in the dry dock" data-alt-lt="BME Services komanda sausajame doke" loading="lazy"></div>
+      <div class="about__media"><video class="cardvid" autoplay loop muted playsinline preload="none" poster="/assets/about-team-poster.jpg" aria-label="BME Services engineers at work in the yard" data-label-en="BME Services engineers at work in the yard" data-label-lt="BME Services inžinieriai darbe doke"><source src="/assets/about-team.webm" type="video/webm"><source src="/assets/about-team.mp4" type="video/mp4"></video><span class="media-tag" data-en="Real BME crew" data-lt="Tikra BME komanda">Real BME crew</span></div>
       <div class="prose"><span class="label eyebrow" data-en="Our story" data-lt="Mūsų istorija">Our story</span>
       <h2 style="margin-top:18px;font-size:clamp(1.7rem,3vw,2.4rem)" data-en="Engineering that keeps machinery running" data-lt="Inžinerija, kad įranga nesustotų">Engineering that keeps machinery running</h2><p data-en="BME Services brings together experienced marine engineers, hydraulic specialists and skilled technicians who have completed projects in shipyards and on board vessels across Europe and beyond. From a complete engine overhaul to a single machined bolt, the same team covers mechanical, hydraulic, pneumatic and machining work under one roof." data-lt="BME Services vienija patyrusius jūrų inžinierius, hidraulikos specialistus ir įgudusius technikus, įgyvendinusius projektus laivų statyklose ir laivuose Europoje ir už jos ribų. Nuo pilno variklio kapitalinio remonto iki vieno pagaminto varžto — ta pati komanda apima mechanikos, hidraulikos, pneumatikos ir apdirbimo darbus vienoje vietoje.">BME Services brings together experienced marine engineers, hydraulic specialists and skilled technicians who have completed projects in shipyards and on board vessels across Europe and beyond. From a complete engine overhaul to a single machined bolt, the same team covers mechanical, hydraulic, pneumatic and machining work under one roof.</p><p data-en="Because every hour of downtime affects vessel operations, we plan each job around access, timing and the parts on hand, then mobilize the right specialists to the vessel, the yard or our workshop. The goal is always the same: efficient, reliable and technically sound solutions delivered to the highest standards of quality and safety." data-lt="Kadangi kiekviena prastovos valanda veikia laivo darbą, kiekvieną užduotį planuojame pagal prieigą, terminus ir turimas dalis, o tada siunčiame reikiamus specialistus į laivą, doką ar dirbtuves. Tikslas visada tas pats: efektyvūs, patikimi ir techniškai pagrįsti sprendimai, atliekami laikantis aukščiausių kokybės ir saugos standartų.">Because every hour of downtime affects vessel operations, we plan each job around access, timing and the parts on hand, then mobilize the right specialists to the vessel, the yard or our workshop. The goal is always the same: efficient, reliable and technically sound solutions delivered to the highest standards of quality and safety.</p></div>
     </div></section><section class="section" style="background:var(--bg-2)"><div class="wrap">
