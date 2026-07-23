@@ -13,7 +13,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#080E17">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media=&#39;all&#39;"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap"></noscript>
-<link rel="preload" as="image" href="/assets/hero-video-poster.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="/assets/drydock-feature-poster.jpg" fetchpriority="high">
 <style>
 :root{
   --bg:#080E17;            /* deep base */
@@ -93,7 +93,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
 /* ============ HERO ============ */
 .hero{position:relative;min-height:clamp(620px,92vh,940px);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
-.hero__bg{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center 40%;background:#04090f}
+.hero__media{position:absolute;inset:0;z-index:-2}
+.hero__slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;opacity:0;transition:opacity 1s ease;background:#04090f}
+.hero__slide.is-active{opacity:1}
 .hero__grad{position:absolute;inset:0;z-index:-1;background:
   linear-gradient(180deg,rgba(8,14,23,.62) 0%,rgba(8,14,23,.28) 34%,rgba(8,14,23,.72) 78%,var(--bg) 100%),
   linear-gradient(90deg,rgba(8,14,23,.85) 0%,rgba(8,14,23,.35) 46%,transparent 74%)}
@@ -419,10 +421,11 @@ a.svc{display:block;text-decoration:none}
 
   <!-- HERO -->
   <section class="hero">
-    <video class="hero__bg" autoplay loop muted playsinline preload="auto" poster="/assets/hero-video-poster.jpg" aria-hidden="true">
-      <source src="/assets/hero-video.mp4" type="video/mp4">
-      <source src="/assets/hero-video.webm" type="video/webm">
-    </video>
+    <div class="hero__media" aria-hidden="true">
+      <video class="hero__slide is-active" data-hero-idx="0" muted playsinline preload="auto" poster="/assets/drydock-feature-poster.jpg"><source src="/assets/drydock-feature.mp4" type="video/mp4"><source src="/assets/drydock-feature.webm" type="video/webm"></video>
+      <video class="hero__slide" data-hero-idx="1" muted playsinline preload="none"><source src="/assets/hero-video.mp4" type="video/mp4"><source src="/assets/hero-video.webm" type="video/webm"></video>
+      <img class="hero__slide" data-hero-idx="2" src="/assets/hero-video-poster.jpg" alt="">
+    </div>
     <div class="hero__grad" aria-hidden="true"></div>
     <div class="wrap hero__in">
       <span class="label eyebrow hero__eyebrow" data-en="JSC BME Services — Klaipėda, Lithuania" data-lt="UAB „BME Services“ — Klaipėda, Lietuva">JSC BME Services — Klaipėda, Lithuania</span>
@@ -480,21 +483,6 @@ a.svc{display:block;text-decoration:none}
       <div class="svc-grid" style="grid-template-columns:repeat(2,1fr)">
         <article class="svc" style="padding:0;overflow:hidden"><img src="/assets/equip-compressor.jpg" alt="Marine compressor unit during overhaul" data-alt-en="Marine compressor unit during overhaul" data-alt-lt="Jūrinio kompresoriaus mazgas remonto metu" loading="lazy" style="aspect-ratio:16/9;object-fit:cover;width:100%;display:block"><div style="padding:22px 26px 28px"><div class="svc__n" data-en="Compressors" data-lt="Kompresoriai">Compressors</div><h3 style="font-size:1.05rem" data-en="Compressor overhaul" data-lt="Kompresorių remontas">Compressor overhaul</h3></div></article>
         <article class="svc" style="padding:0;overflow:hidden"><img src="/assets/equip-gearbox.jpg" alt="Marine gearbox gear rotor during overhaul" data-alt-en="Marine gearbox gear rotor during overhaul" data-alt-lt="Jūrinio reduktoriaus krumplinis rotorius remonto metu" loading="lazy" style="aspect-ratio:16/9;object-fit:cover;width:100%;display:block"><div style="padding:22px 26px 28px"><div class="svc__n" data-en="Gearboxes" data-lt="Reduktoriai">Gearboxes</div><h3 style="font-size:1.05rem" data-en="Gearbox overhaul" data-lt="Reduktorių remontas">Gearbox overhaul</h3></div></article>
-      </div>
-    </div>
-  </section>
-
-  <!-- DRY DOCK VIDEO (tikra BME footage, pridėta 2026-07-23; hero lieka atskiras) -->
-  <section class="section" id="drydock">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="label eyebrow" data-en="On site" data-lt="Objekte">On site</span>
-        <h2 data-en="Real work, in the dry dock" data-lt="Tikri darbai sausajame doke">Real work, in the dry dock</h2>
-        <p data-en="A propeller refit under way — the propulsion, shaft and stern-gear work our engineers carry out afloat and in dock." data-lt="Sraigto montavimas — varomųjų sistemų, veleno ir laivagalio darbai, kuriuos mūsų inžinieriai atlieka prie krantinės ir sausajame doke.">A propeller refit under way — the propulsion, shaft and stern-gear work our engineers carry out afloat and in dock.</p>
-      </div>
-      <div style="position:relative;border:1px solid var(--line-str);border-radius:8px;overflow:hidden;aspect-ratio:16/9;max-height:72vh;margin-inline:auto">
-        <video class="cardvid" loop muted playsinline preload="none" poster="/assets/drydock-feature-poster.jpg" aria-label="BME engineer guiding a ship propeller refit in dry dock" data-label-en="BME engineer guiding a ship propeller refit in dry dock" data-label-lt="BME inžinierius vadovauja laivo sraigto montavimui sausajame doke" style="width:100%;height:100%;object-fit:cover;display:block"><source src="/assets/drydock-feature.mp4" type="video/mp4"><source src="/assets/drydock-feature.webm" type="video/webm"></video>
-        <span class="media-tag" data-en="Real BME work" data-lt="Tikri BME darbai">Real BME work</span>
       </div>
     </div>
   </section>
@@ -713,12 +701,29 @@ a.svc{display:block;text-decoration:none}
     document.addEventListener('keydown',function(e){ if(e.key==='Escape'){sub.setAttribute('aria-expanded','false'); stog.setAttribute('aria-expanded','false');} });
   }
 })();
-(function(){ // hero/card video (jei yra)
-  var hero=document.querySelector('.hero__bg');
-  if(hero){ hero.muted=true; var tp=function(){try{var p=hero.play(); if(p&&p.catch)p.catch(function(){});}catch(e){}}; tp();
-    hero.addEventListener('loadeddata',tp,{once:true}); hero.addEventListener('canplay',tp,{once:true});
-    ['click','touchstart','scroll','keydown','pointerdown'].forEach(function(ev){window.addEventListener(ev,tp,{once:true,passive:true});});
-    document.addEventListener('visibilitychange',function(){if(!document.hidden)tp();}); }  // paleidžia, kai tab'as tampa matomas (užsikrovė fone → statinis kadras be šito)
+(function(){ // hero medijos seka: naujas video -> senas video -> nuotrauka -> ciklas
+  var slides=[].slice.call(document.querySelectorAll('.hero__slide'));
+  if(slides.length){
+    var cur=0, PHOTO_MS=5500, timer;
+    function playCur(){ var el=slides[cur]; if(el&&el.tagName==='VIDEO'){ el.muted=true; var p=el.play(); if(p&&p.catch)p.catch(function(){}); } }
+    function nextIdx(){ return (cur+1)%slides.length; }
+    function activate(i){
+      cur=i;
+      slides.forEach(function(s,j){ s.classList.toggle('is-active', j===i); });
+      var el=slides[i]; clearTimeout(timer);
+      if(el.tagName==='VIDEO'){
+        el.muted=true; try{el.currentTime=0;}catch(e){}
+        var p=el.play(); if(p&&p.catch)p.catch(function(){});
+        el.onended=function(){ activate(nextIdx()); };
+        timer=setTimeout(function(){ activate(nextIdx()); }, 20000);  // saugiklis, jei 'ended' nesuveikia (blokuotas/paslėptas tab'as)
+      } else {
+        timer=setTimeout(function(){ activate(nextIdx()); }, PHOTO_MS);  // nuotrauka rodoma PHOTO_MS
+      }
+    }
+    activate(0);
+    document.addEventListener('visibilitychange',function(){ if(!document.hidden) playCur(); });  // paslėptas tab'as stabdo video → grįžus paleidžiam
+    ['click','touchstart','pointerdown','keydown'].forEach(function(ev){window.addEventListener(ev,playCur,{once:true,passive:true});});  // autoplay politika: 1-as gestas
+  }
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var vids=document.querySelectorAll('video.cardvid');
   if(reduce){vids.forEach(function(v){v.removeAttribute('autoplay');try{v.pause();}catch(e){}});}

@@ -93,7 +93,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
 /* ============ HERO ============ */
 .hero{position:relative;min-height:clamp(620px,92vh,940px);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
-.hero__bg{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center 40%;background:#04090f}
+.hero__media{position:absolute;inset:0;z-index:-2}
+.hero__slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;opacity:0;transition:opacity 1s ease;background:#04090f}
+.hero__slide.is-active{opacity:1}
 .hero__grad{position:absolute;inset:0;z-index:-1;background:
   linear-gradient(180deg,rgba(8,14,23,.62) 0%,rgba(8,14,23,.28) 34%,rgba(8,14,23,.72) 78%,var(--bg) 100%),
   linear-gradient(90deg,rgba(8,14,23,.85) 0%,rgba(8,14,23,.35) 46%,transparent 74%)}
@@ -494,12 +496,29 @@ a.svc{display:block;text-decoration:none}
     document.addEventListener('keydown',function(e){ if(e.key==='Escape'){sub.setAttribute('aria-expanded','false'); stog.setAttribute('aria-expanded','false');} });
   }
 })();
-(function(){ // hero/card video (jei yra)
-  var hero=document.querySelector('.hero__bg');
-  if(hero){ hero.muted=true; var tp=function(){try{var p=hero.play(); if(p&&p.catch)p.catch(function(){});}catch(e){}}; tp();
-    hero.addEventListener('loadeddata',tp,{once:true}); hero.addEventListener('canplay',tp,{once:true});
-    ['click','touchstart','scroll','keydown','pointerdown'].forEach(function(ev){window.addEventListener(ev,tp,{once:true,passive:true});});
-    document.addEventListener('visibilitychange',function(){if(!document.hidden)tp();}); }  // paleidžia, kai tab'as tampa matomas (užsikrovė fone → statinis kadras be šito)
+(function(){ // hero medijos seka: naujas video -> senas video -> nuotrauka -> ciklas
+  var slides=[].slice.call(document.querySelectorAll('.hero__slide'));
+  if(slides.length){
+    var cur=0, PHOTO_MS=5500, timer;
+    function playCur(){ var el=slides[cur]; if(el&&el.tagName==='VIDEO'){ el.muted=true; var p=el.play(); if(p&&p.catch)p.catch(function(){}); } }
+    function nextIdx(){ return (cur+1)%slides.length; }
+    function activate(i){
+      cur=i;
+      slides.forEach(function(s,j){ s.classList.toggle('is-active', j===i); });
+      var el=slides[i]; clearTimeout(timer);
+      if(el.tagName==='VIDEO'){
+        el.muted=true; try{el.currentTime=0;}catch(e){}
+        var p=el.play(); if(p&&p.catch)p.catch(function(){});
+        el.onended=function(){ activate(nextIdx()); };
+        timer=setTimeout(function(){ activate(nextIdx()); }, 20000);  // saugiklis, jei 'ended' nesuveikia (blokuotas/paslėptas tab'as)
+      } else {
+        timer=setTimeout(function(){ activate(nextIdx()); }, PHOTO_MS);  // nuotrauka rodoma PHOTO_MS
+      }
+    }
+    activate(0);
+    document.addEventListener('visibilitychange',function(){ if(!document.hidden) playCur(); });  // paslėptas tab'as stabdo video → grįžus paleidžiam
+    ['click','touchstart','pointerdown','keydown'].forEach(function(ev){window.addEventListener(ev,playCur,{once:true,passive:true});});  // autoplay politika: 1-as gestas
+  }
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var vids=document.querySelectorAll('video.cardvid');
   if(reduce){vids.forEach(function(v){v.removeAttribute('autoplay');try{v.pause();}catch(e){}});}
