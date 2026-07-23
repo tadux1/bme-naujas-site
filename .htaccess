@@ -12,6 +12,11 @@ AddType application/manifest+json .webmanifest
 # ---------- WebP negotiation (serve .webp jei naršyklė palaiko ir failas yra) ----------
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # ---------- 301: pensionuoti URL (pump-repair -> propulsion-marine) ----------
+  RewriteRule ^services/pump-repair/?$ /services/propulsion-marine/ [R=301,L]
+
+  # ---------- WebP negotiation (serve .webp jei naršyklė palaiko ir failas yra) ----------
   RewriteCond %{HTTP_ACCEPT} image/webp
   RewriteCond %{REQUEST_FILENAME} (.+)\.(jpe?g|png)$
   RewriteCond %1.webp -f
