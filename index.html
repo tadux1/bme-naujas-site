@@ -255,8 +255,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 
-/* ===== CONTACT: email purpose label ===== */
+/* ===== CONTACT: email purpose label + form status ===== */
 .cinfo__k{display:block;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:1px}
+.form__status .fs{display:none;margin-top:16px;padding:12px 16px;border-radius:6px;font-size:.92rem;line-height:1.5}
+.form__status[data-state="ok"] .fs--ok{display:block;color:#8ee9c0;background:rgba(46,204,113,.09);border:1px solid rgba(46,204,113,.32)}
+.form__status[data-state="err"] .fs--err{display:block;color:#ff9d9d;background:rgba(231,76,60,.09);border:1px solid rgba(231,76,60,.32)}
+.form button[type="submit"][disabled]{opacity:.6;cursor:progress}
 .cinfo__c p{margin-top:6px}
 .cinfo__c p:first-of-type{margin-top:0}
 /* ===== DROPDOWN NAV ===== */
@@ -637,20 +641,22 @@ a.svc{display:block;text-decoration:none}
           <div class="cinfo__c"><span class="label" data-en="Response" data-lt="Reagavimas">Response</span><p data-en="24/7 worldwide" data-lt="24/7 visame pasaulyje">24/7 worldwide</p></div>
         </div>
       </div>
-      <form class="form" onsubmit="return false">
+      <form class="form" action="/contact.php" method="post">
+        <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
         <div class="form__row">
-          <div class="field"><label for="n" data-en="Name" data-lt="Vardas">Name</label><input id="n" type="text" autocomplete="name"></div>
-          <div class="field"><label for="c" data-en="Company" data-lt="Įmonė">Company</label><input id="c" type="text" autocomplete="organization"></div>
+          <div class="field"><label for="n" data-en="Name" data-lt="Vardas">Name</label><input id="n" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="c" data-en="Company" data-lt="Įmonė">Company</label><input id="c" name="company" type="text" autocomplete="organization"></div>
         </div>
         <div class="form__row">
-          <div class="field"><label for="e" data-en="Email" data-lt="El. paštas">Email</label><input id="e" type="email" autocomplete="email"></div>
-          <div class="field"><label for="p" data-en="Phone" data-lt="Telefonas">Phone</label><input id="p" type="tel" autocomplete="tel"></div>
+          <div class="field"><label for="e" data-en="Email" data-lt="El. paštas">Email</label><input id="e" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="p" data-en="Phone" data-lt="Telefonas">Phone</label><input id="p" name="phone" type="tel" autocomplete="tel"></div>
         </div>
         <div class="field"><label for="s" data-en="Service needed" data-lt="Reikalinga paslauga">Service needed</label>
-          <select id="s" required><option value="" disabled selected data-en="Select a service…" data-lt="Pasirinkite paslaugą…">Select a service…</option><option data-en="Propulsion Marine" data-lt="Laivų varomosios sistemos">Propulsion Marine</option><option data-en="Gearbox Maintenance &amp; Overhaul" data-lt="Reduktorių priežiūra ir kapitalinis remontas">Gearbox Maintenance &amp; Overhaul</option><option data-en="Hydraulic Systems Repair" data-lt="Hidraulinių sistemų remontas">Hydraulic Systems Repair</option><option data-en="Main &amp; Auxiliary Engine Repair" data-lt="Pagrindinių ir pagalbinių variklių remontas">Main &amp; Auxiliary Engine Repair</option><option data-en="Compressor Installation &amp; Repair" data-lt="Kompresorių montavimas ir remontas">Compressor Installation &amp; Repair</option><option data-en="Pneumatic Systems Installation &amp; Repair" data-lt="Pneumatinių sistemų montavimas ir remontas">Pneumatic Systems Installation &amp; Repair</option><option data-en="Manpower Supply" data-lt="Darbo jėgos nuoma">Manpower Supply</option><option data-en="Seized Bolt Removal &amp; Bolt Manufacturing" data-lt="Prikepusių varžtų šalinimas ir gamyba">Seized Bolt Removal &amp; Bolt Manufacturing</option><option data-en="Spare Parts Supply" data-lt="Atsarginių dalių tiekimas">Spare Parts Supply</option></select>
+          <select id="s" name="service" required><option value="" disabled selected data-en="Select a service…" data-lt="Pasirinkite paslaugą…">Select a service…</option><option data-en="Propulsion Marine" data-lt="Laivų varomosios sistemos">Propulsion Marine</option><option data-en="Gearbox Maintenance &amp; Overhaul" data-lt="Reduktorių priežiūra ir kapitalinis remontas">Gearbox Maintenance &amp; Overhaul</option><option data-en="Hydraulic Systems Repair" data-lt="Hidraulinių sistemų remontas">Hydraulic Systems Repair</option><option data-en="Main &amp; Auxiliary Engine Repair" data-lt="Pagrindinių ir pagalbinių variklių remontas">Main &amp; Auxiliary Engine Repair</option><option data-en="Compressor Installation &amp; Repair" data-lt="Kompresorių montavimas ir remontas">Compressor Installation &amp; Repair</option><option data-en="Pneumatic Systems Installation &amp; Repair" data-lt="Pneumatinių sistemų montavimas ir remontas">Pneumatic Systems Installation &amp; Repair</option><option data-en="Manpower Supply" data-lt="Darbo jėgos nuoma">Manpower Supply</option><option data-en="Seized Bolt Removal &amp; Bolt Manufacturing" data-lt="Prikepusių varžtų šalinimas ir gamyba">Seized Bolt Removal &amp; Bolt Manufacturing</option><option data-en="Spare Parts Supply" data-lt="Atsarginių dalių tiekimas">Spare Parts Supply</option></select>
         </div>
-        <div class="field"><label for="m" data-en="Message" data-lt="Žinutė">Message</label><textarea id="m"></textarea></div>
+        <div class="field"><label for="m" data-en="Message" data-lt="Žinutė">Message</label><textarea id="m" name="message" required></textarea></div>
         <button class="btn btn--primary" type="submit"><span data-en="Send inquiry" data-lt="Siųsti užklausą">Send inquiry</span> <span class="btn__i" aria-hidden="true">→</span></button>
+        <div class="form__status" role="status" aria-live="polite"><span class="fs fs--ok" data-en="Thank you — your inquiry has been sent. We'll reply shortly." data-lt="Ačiū — jūsų užklausa išsiųsta. Netrukus atsakysime.">Thank you — your inquiry has been sent. We'll reply shortly.</span><span class="fs fs--err" data-en="Could not send — please email info@servicesbme.com directly." data-lt="Nepavyko išsiųsti — rašykite tiesiogiai info@servicesbme.com.">Could not send — please email info@servicesbme.com directly.</span></div>
       </form>
     </div>
   </section>
@@ -729,6 +735,22 @@ a.svc{display:block;text-decoration:none}
   if(reduce){vids.forEach(function(v){v.removeAttribute('autoplay');try{v.pause();}catch(e){}});}
   else if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var p=e.target.play();if(p&&p.catch)p.catch(function(){});}else{try{e.target.pause();}catch(x){}}});},{threshold:.2}); vids.forEach(function(v){io.observe(v);});}
   else {vids.forEach(function(v){var p=v.play(); if(p&&p.catch)p.catch(function(){});});}
+})();
+(function(){ // kontaktų forma -> /contact.php (AJAX; el. laiškas į info@servicesbme.com)
+  var forms=document.querySelectorAll('form.form');
+  Array.prototype.forEach.call(forms,function(f){
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var st=f.querySelector('.form__status'), btn=f.querySelector('button[type=submit]');
+      if(st){st.setAttribute('data-state','sending');}
+      if(btn){btn.disabled=true;}
+      fetch('/contact.php',{method:'POST',body:new FormData(f),headers:{'X-Requested-With':'XMLHttpRequest'}})
+        .then(function(r){return r.json().then(function(j){return r.ok&&j&&j.ok;}).catch(function(){return r.ok;});})
+        .then(function(ok){ if(ok){ f.reset(); if(st)st.setAttribute('data-state','ok'); } else { if(st)st.setAttribute('data-state','err'); } })
+        .catch(function(){ if(st)st.setAttribute('data-state','err'); })
+        .then(function(){ if(btn)btn.disabled=false; });
+    });
+  });
 })();
 </script>
 </body>
